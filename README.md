@@ -1,1 +1,1 @@
-# Intern_SusTech
+# Intern_SUSTech
