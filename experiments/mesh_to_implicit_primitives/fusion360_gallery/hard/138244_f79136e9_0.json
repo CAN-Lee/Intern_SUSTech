@@ -1,0 +1,95 @@
+{
+    "metadata": {
+        "component_name": "Untitled"
+    },
+    "body": {
+        "properties": {
+            "name": "Body1",
+            "edge_count": 14,
+            "face_count": 12,
+            "shell_count": 1
+        },
+        "faces": [
+            {
+                "feature": "73af359e-8a43-11ea-a145-54bf646e7e1f"
+            },
+            {
+                "feature": "73af0e8c-8a43-11ea-af8e-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "73af0e8a-8a43-11ea-bee4-54bf646e7e1f",
+                "location_in_feature": "StartFace"
+            },
+            {
+                "feature": "73af359e-8a43-11ea-a145-54bf646e7e1f"
+            },
+            {
+                "feature": "73af359c-8a43-11ea-b159-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "73af0e8b-8a43-11ea-8a9e-54bf646e7e1f",
+                "location_in_feature": "EndFace"
+            },
+            {
+                "feature": "73af359d-8a43-11ea-a10f-54bf646e7e1f"
+            },
+            {
+                "feature": "73af0e8a-8a43-11ea-bee4-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "73af0e8b-8a43-11ea-8a9e-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "73af359d-8a43-11ea-a10f-54bf646e7e1f"
+            },
+            {
+                "feature": "73af0e8a-8a43-11ea-bee4-54bf646e7e1f",
+                "location_in_feature": "EndFace"
+            },
+            {
+                "feature": "73af0e8c-8a43-11ea-af8e-54bf646e7e1f",
+                "location_in_feature": "EndFace"
+            }
+        ]
+    },
+    "features": {
+        "73af0e8a-8a43-11ea-bee4-54bf646e7e1f": {
+            "name": "Extrude1",
+            "type": "ExtrudeFeature",
+            "operation": "NewBodyFeatureOperation",
+            "timeline_index": 1
+        },
+        "73af0e8b-8a43-11ea-8a9e-54bf646e7e1f": {
+            "name": "Extrude3",
+            "type": "ExtrudeFeature",
+            "operation": "JoinFeatureOperation",
+            "timeline_index": 4
+        },
+        "73af0e8c-8a43-11ea-af8e-54bf646e7e1f": {
+            "name": "Extrude4",
+            "type": "ExtrudeFeature",
+            "operation": "CutFeatureOperation",
+            "timeline_index": 5
+        },
+        "73af359c-8a43-11ea-b159-54bf646e7e1f": {
+            "name": "Extrude5",
+            "type": "ExtrudeFeature",
+            "operation": "CutFeatureOperation",
+            "timeline_index": 6
+        },
+        "73af359d-8a43-11ea-a10f-54bf646e7e1f": {
+            "name": "Fillet1",
+            "type": "FilletFeature",
+            "timeline_index": 7
+        },
+        "73af359e-8a43-11ea-a145-54bf646e7e1f": {
+            "name": "Chamfer1",
+            "type": "ChamferFeature",
+            "timeline_index": 8
+        }
+    }
+}

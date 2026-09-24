@@ -1,0 +1,22 @@
+{
+  "case": "fusion360_gallery/hard/138244_f79136e9_0.obj",
+  "sha256": "57462e606d647598f33a50539f957bd2693751bb6e12ac859334e88642243458",
+  "seed": 42,
+  "optimization_seconds": 1.8320608343929052,
+  "primitive_count": 3,
+  "validation_mse": 0.0005105419714665356,
+  "bbox_baseline": {
+    "voxel_iou_48": 0.22538489079842464,
+    "target_occupied": 15108,
+    "predicted_occupied": 67032
+  },
+  "fit": {
+    "voxel_iou_48": 0.811629137515433,
+    "target_occupied": 15108,
+    "predicted_occupied": 15706
+  },
+  "reconstructed_watertight": true,
+  "surface_distance_mean": 0.008858392772072069,
+  "surface_distance_p95": 0.042457716913786955,
+  "total_seconds": 92.69095587078482
+}

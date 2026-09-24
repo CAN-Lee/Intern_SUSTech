@@ -12,9 +12,20 @@
 
 举例：同一组杯子表面点可以来自空心杯，也可以只扫描了实心物体的外侧。不可见区域的信息不足不能靠换一种表示自动消除。
 
+![同一物体的四种几何表示](figures/representation_layers.svg)
+
+图中四栏描述近似相同的圆柱体。Point cloud 只保存采样坐标；Mesh 再保存三角形连接；B-rep 保存解析曲面及其裁剪拓扑；implicit representation 则通过空间函数的零水平集定义边界。图形外观相近，并不代表它们包含的信息或支持的操作相同。
+
 ## 2. B-rep：几何 + 拓扑 + 裁剪
 
-B-rep 即 boundary representation。用相接的面围住实体，但“面”不只是一个曲面方程。
+**定义（B-rep）。** 对正则实体 $S\subset\mathbb R^3$，其边界表示写成
+
+$$
+\mathcal B=(G,T,\iota),\qquad
+\partial S=\bigcup_{f\in F}\iota(f).
+$$
+
+其中，$G$ 是曲面和曲线等几何载体；$T=(V,E,F)$ 是由 vertex、edge 和 face 组成的有向二维拓扑复形；$\iota$ 把每个拓扑元素嵌入对应的几何载体。每个 $\iota(f)$ 都是某个参数曲面上由 loops 裁剪出的有限区域。若 $S$ 是封闭实体，则每条非退化 edge 邻接两个 face，且两个 face 沿该 edge 的诱导方向相反；所有 faces 的并集构成 $\partial S$。
 
 | 层次 | 作用 | 带孔底座的例子 |
 |---|---|---|
@@ -25,6 +36,10 @@ B-rep 即 boundary representation。用相接的面围住实体，但“面”�
 | 壳 shell、实体 solid | 组织面，并定义空间区域 | 外表面与孔壁共同围住材料 |
 
 一个无限平面无法表达“带圆孔的矩形顶面”；必须补充边界裁剪与内外环。相邻两个面可以共享同一条边，却以相反方向使用它。因此后面的 B-rep 生成方法必须处理拓扑关系，不只是顶点坐标。
+
+![B-rep 的几何、裁剪与拓扑](figures/brep_anatomy.svg)
+
+从左到右看：surface 是无限延伸的几何载体；外环和内环把它裁成带孔 face；多个 face 沿共享的 edge 连接成 shell，封闭且定向一致的 shell 才能界定 solid。这里红色内环表示孔的边界，红色 shared edge 表示相邻面共享的拓扑实体。
 
 参数曲面的典型形式为
 

@@ -1,0 +1,127 @@
+{
+    "metadata": {
+        "component_name": "Untitled"
+    },
+    "body": {
+        "properties": {
+            "name": "Body30",
+            "edge_count": 25,
+            "face_count": 26,
+            "shell_count": 1
+        },
+        "faces": [
+            {
+                "feature": "3f326bc6-8a3c-11ea-aeaa-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "3f326bc6-8a3c-11ea-aeaa-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "3f326bc6-8a3c-11ea-aeaa-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "3f326bc6-8a3c-11ea-aeaa-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "3f326bc6-8a3c-11ea-aeaa-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "3f326bc6-8a3c-11ea-aeaa-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "3f326bc6-8a3c-11ea-aeaa-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "3f326bc6-8a3c-11ea-aeaa-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "3f326bc6-8a3c-11ea-aeaa-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "3f326bc6-8a3c-11ea-aeaa-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "3f326bc6-8a3c-11ea-aeaa-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "3f326bc6-8a3c-11ea-aeaa-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "3f326bc6-8a3c-11ea-aeaa-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "3f326bc6-8a3c-11ea-aeaa-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "3f326bc6-8a3c-11ea-aeaa-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "3f326bc6-8a3c-11ea-aeaa-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "3f326bc6-8a3c-11ea-aeaa-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "3f326bc6-8a3c-11ea-aeaa-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "3f326bc6-8a3c-11ea-aeaa-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "3f326bc6-8a3c-11ea-aeaa-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "3f326bc6-8a3c-11ea-aeaa-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "3f326bc6-8a3c-11ea-aeaa-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "3f326bc6-8a3c-11ea-aeaa-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "3f326bc6-8a3c-11ea-aeaa-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "3f326bc6-8a3c-11ea-aeaa-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "3f326bc6-8a3c-11ea-aeaa-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            }
+        ]
+    },
+    "features": {
+        "3f326bc6-8a3c-11ea-aeaa-54bf646e7e1f": {
+            "name": "Revolve5",
+            "type": "RevolveFeature",
+            "operation": "NewBodyFeatureOperation",
+            "timeline_index": 63
+        }
+    }
+}

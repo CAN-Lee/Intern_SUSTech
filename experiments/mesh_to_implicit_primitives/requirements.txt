@@ -1,0 +1,3 @@
+-e ../../submodule/sdfcad
+trimesh==5.1.0
+rtree==1.4.1

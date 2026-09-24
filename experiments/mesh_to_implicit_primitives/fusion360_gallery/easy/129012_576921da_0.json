@@ -1,0 +1,55 @@
+{
+    "metadata": {
+        "component_name": "Untitled"
+    },
+    "body": {
+        "properties": {
+            "name": "Body1",
+            "edge_count": 18,
+            "face_count": 8,
+            "shell_count": 1
+        },
+        "faces": [
+            {
+                "feature": "a87de89a-8a47-11ea-b3b7-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "a87de89a-8a47-11ea-b3b7-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "a87de89a-8a47-11ea-b3b7-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "a87de89a-8a47-11ea-b3b7-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "a87de89a-8a47-11ea-b3b7-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "a87de89a-8a47-11ea-b3b7-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "a87de89a-8a47-11ea-b3b7-54bf646e7e1f",
+                "location_in_feature": "EndFace"
+            },
+            {
+                "feature": "a87de89a-8a47-11ea-b3b7-54bf646e7e1f",
+                "location_in_feature": "StartFace"
+            }
+        ]
+    },
+    "features": {
+        "a87de89a-8a47-11ea-b3b7-54bf646e7e1f": {
+            "name": "Extrude1",
+            "type": "ExtrudeFeature",
+            "operation": "NewBodyFeatureOperation",
+            "timeline_index": 3
+        }
+    }
+}

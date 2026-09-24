@@ -1,0 +1,69 @@
+{
+    "metadata": {
+        "component_name": "Bodenplatte"
+    },
+    "body": {
+        "properties": {
+            "name": "Body2",
+            "edge_count": 24,
+            "face_count": 10,
+            "shell_count": 1
+        },
+        "faces": [
+            {
+                "feature": "b09aee46-8a5b-11ea-877f-54bf646e7e1f",
+                "location_in_feature": "StartFace"
+            },
+            {
+                "feature": "b09aee46-8a5b-11ea-877f-54bf646e7e1f",
+                "location_in_feature": "EndFace"
+            },
+            {
+                "feature": "b09b1558-8a5b-11ea-9a35-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "b09b1558-8a5b-11ea-9a35-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "b09b1558-8a5b-11ea-9a35-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "b09b1558-8a5b-11ea-9a35-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "b09b1558-8a5b-11ea-9a35-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "b09b1558-8a5b-11ea-9a35-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "b09b1558-8a5b-11ea-9a35-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "b09b1558-8a5b-11ea-9a35-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            }
+        ]
+    },
+    "features": {
+        "b09aee46-8a5b-11ea-877f-54bf646e7e1f": {
+            "name": "Extrusion1",
+            "type": "ExtrudeFeature",
+            "operation": "NewBodyFeatureOperation",
+            "timeline_index": 22
+        },
+        "b09b1558-8a5b-11ea-9a35-54bf646e7e1f": {
+            "name": "Extrusion2",
+            "type": "ExtrudeFeature",
+            "operation": "CutFeatureOperation",
+            "timeline_index": 25
+        }
+    }
+}

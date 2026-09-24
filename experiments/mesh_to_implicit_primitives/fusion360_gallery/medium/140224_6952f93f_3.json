@@ -1,0 +1,72 @@
+{
+    "metadata": {
+        "component_name": "Component2"
+    },
+    "body": {
+        "properties": {
+            "name": "Body1",
+            "edge_count": 28,
+            "face_count": 14,
+            "shell_count": 1
+        },
+        "faces": [
+            {
+                "feature": "c44230df-8a4d-11ea-a684-54bf646e7e1f"
+            },
+            {
+                "feature": "c44230df-8a4d-11ea-a684-54bf646e7e1f"
+            },
+            {
+                "feature": "c44230df-8a4d-11ea-a684-54bf646e7e1f"
+            },
+            {
+                "feature": "c44230df-8a4d-11ea-a684-54bf646e7e1f"
+            },
+            {
+                "feature": "c44230df-8a4d-11ea-a684-54bf646e7e1f"
+            },
+            {
+                "feature": "c44230df-8a4d-11ea-a684-54bf646e7e1f"
+            },
+            {
+                "feature": "c44230df-8a4d-11ea-a684-54bf646e7e1f"
+            },
+            {
+                "feature": "c44230df-8a4d-11ea-a684-54bf646e7e1f"
+            },
+            {
+                "feature": "c44230df-8a4d-11ea-a684-54bf646e7e1f"
+            },
+            {
+                "feature": "c44230df-8a4d-11ea-a684-54bf646e7e1f"
+            },
+            {
+                "feature": "c44230df-8a4d-11ea-a684-54bf646e7e1f"
+            },
+            {
+                "feature": "c44230df-8a4d-11ea-a684-54bf646e7e1f"
+            },
+            {
+                "feature": "c44230de-8a4d-11ea-8a20-54bf646e7e1f",
+                "location_in_feature": "StartFace"
+            },
+            {
+                "feature": "c44230de-8a4d-11ea-8a20-54bf646e7e1f",
+                "location_in_feature": "EndFace"
+            }
+        ]
+    },
+    "features": {
+        "c44230de-8a4d-11ea-8a20-54bf646e7e1f": {
+            "name": "Extrude1",
+            "type": "ExtrudeFeature",
+            "operation": "NewBodyFeatureOperation",
+            "timeline_index": 48
+        },
+        "c44230df-8a4d-11ea-a684-54bf646e7e1f": {
+            "name": "Fillet1",
+            "type": "FilletFeature",
+            "timeline_index": 49
+        }
+    }
+}

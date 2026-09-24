@@ -1,0 +1,218 @@
+{
+    "metadata": {
+        "component_name": "Untitled"
+    },
+    "body": {
+        "properties": {
+            "name": "Body1",
+            "edge_count": 68,
+            "face_count": 36,
+            "shell_count": 1
+        },
+        "faces": [
+            {
+                "feature": "be13348c-8a46-11ea-a170-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "be13348c-8a46-11ea-a170-54bf646e7e1f",
+                "location_in_feature": "EndFace"
+            },
+            {
+                "feature": "be13348b-8a46-11ea-980d-54bf646e7e1f",
+                "location_in_feature": "EndFace"
+            },
+            {
+                "feature": "be13348b-8a46-11ea-980d-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "be13348a-8a46-11ea-b076-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "be13348a-8a46-11ea-b076-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "be13348a-8a46-11ea-b076-54bf646e7e1f",
+                "location_in_feature": "EndFace"
+            },
+            {
+                "feature": "be130d9b-8a46-11ea-913a-54bf646e7e1f",
+                "location_in_feature": "EndFace"
+            },
+            {
+                "feature": "be130d9b-8a46-11ea-913a-54bf646e7e1f",
+                "location_in_feature": "EndFace"
+            },
+            {
+                "feature": "be12e677-8a46-11ea-b9ac-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "be12e677-8a46-11ea-b9ac-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "be12e678-8a46-11ea-9367-54bf646e7e1f"
+            },
+            {
+                "feature": "be12e676-8a46-11ea-84f1-54bf646e7e1f",
+                "location_in_feature": "EndFace"
+            },
+            {
+                "feature": "be12e678-8a46-11ea-9367-54bf646e7e1f"
+            },
+            {
+                "feature": "be12e677-8a46-11ea-b9ac-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "be12e677-8a46-11ea-b9ac-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "be130d9a-8a46-11ea-8a06-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "be130d9a-8a46-11ea-8a06-54bf646e7e1f",
+                "location_in_feature": "StartFace"
+            },
+            {
+                "feature": "be130d9a-8a46-11ea-8a06-54bf646e7e1f",
+                "location_in_feature": "StartFace"
+            },
+            {
+                "feature": "be130d9a-8a46-11ea-8a06-54bf646e7e1f",
+                "location_in_feature": "StartFace"
+            },
+            {
+                "feature": "be130d9a-8a46-11ea-8a06-54bf646e7e1f",
+                "location_in_feature": "StartFace"
+            },
+            {
+                "feature": "be130d9a-8a46-11ea-8a06-54bf646e7e1f",
+                "location_in_feature": "StartFace"
+            },
+            {
+                "feature": "be130d9a-8a46-11ea-8a06-54bf646e7e1f",
+                "location_in_feature": "StartFace"
+            },
+            {
+                "feature": "be130d9a-8a46-11ea-8a06-54bf646e7e1f",
+                "location_in_feature": "StartFace"
+            },
+            {
+                "feature": "be130d9a-8a46-11ea-8a06-54bf646e7e1f",
+                "location_in_feature": "StartFace"
+            },
+            {
+                "feature": "be130d9a-8a46-11ea-8a06-54bf646e7e1f",
+                "location_in_feature": "StartFace"
+            },
+            {
+                "feature": "be12bf66-8a46-11ea-bd7b-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "be12bf66-8a46-11ea-bd7b-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "be12bf66-8a46-11ea-bd7b-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "be12bf66-8a46-11ea-bd7b-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "be12bf67-8a46-11ea-b146-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "be12bf66-8a46-11ea-bd7b-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "be12bf66-8a46-11ea-bd7b-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "be12bf66-8a46-11ea-bd7b-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "be12bf66-8a46-11ea-bd7b-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "be12bf66-8a46-11ea-bd7b-54bf646e7e1f",
+                "location_in_feature": "StartFace"
+            }
+        ]
+    },
+    "features": {
+        "be12bf66-8a46-11ea-bd7b-54bf646e7e1f": {
+            "name": "Extrude1",
+            "type": "ExtrudeFeature",
+            "operation": "NewBodyFeatureOperation",
+            "timeline_index": 1
+        },
+        "be12bf67-8a46-11ea-b146-54bf646e7e1f": {
+            "name": "Extrude2",
+            "type": "ExtrudeFeature",
+            "operation": "CutFeatureOperation",
+            "timeline_index": 3
+        },
+        "be12e676-8a46-11ea-84f1-54bf646e7e1f": {
+            "name": "Extrude4",
+            "type": "ExtrudeFeature",
+            "operation": "JoinFeatureOperation",
+            "timeline_index": 7
+        },
+        "be12e677-8a46-11ea-b9ac-54bf646e7e1f": {
+            "name": "Extrude5",
+            "type": "ExtrudeFeature",
+            "operation": "CutFeatureOperation",
+            "timeline_index": 8
+        },
+        "be12e678-8a46-11ea-9367-54bf646e7e1f": {
+            "name": "Fillet1",
+            "type": "FilletFeature",
+            "timeline_index": 9
+        },
+        "be130d9a-8a46-11ea-8a06-54bf646e7e1f": {
+            "name": "Extrude6",
+            "type": "ExtrudeFeature",
+            "operation": "JoinFeatureOperation",
+            "timeline_index": 11
+        },
+        "be130d9b-8a46-11ea-913a-54bf646e7e1f": {
+            "name": "Extrude10",
+            "type": "ExtrudeFeature",
+            "operation": "CutFeatureOperation",
+            "timeline_index": 23
+        },
+        "be13348a-8a46-11ea-b076-54bf646e7e1f": {
+            "name": "Extrude11",
+            "type": "ExtrudeFeature",
+            "operation": "JoinFeatureOperation",
+            "timeline_index": 25
+        },
+        "be13348b-8a46-11ea-980d-54bf646e7e1f": {
+            "name": "Extrude13",
+            "type": "ExtrudeFeature",
+            "operation": "CutFeatureOperation",
+            "timeline_index": 28
+        },
+        "be13348c-8a46-11ea-a170-54bf646e7e1f": {
+            "name": "Extrude14",
+            "type": "ExtrudeFeature",
+            "operation": "CutFeatureOperation",
+            "timeline_index": 29
+        }
+    }
+}

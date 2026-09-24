@@ -1,0 +1,3 @@
+[submodule "submodule/sdfcad"]
+	path = submodule/sdfcad
+	url = https://gitlab.com/nobodyinperson/sdfcad.git

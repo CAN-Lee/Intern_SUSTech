@@ -1,0 +1,51 @@
+{
+    "metadata": {
+        "component_name": "Untitled"
+    },
+    "body": {
+        "properties": {
+            "name": "Body1",
+            "edge_count": 14,
+            "face_count": 7,
+            "shell_count": 1
+        },
+        "faces": [
+            {
+                "feature": "a92e13c8-8a4b-11ea-8096-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "a92e13c8-8a4b-11ea-8096-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "a92e13c8-8a4b-11ea-8096-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "a92e13c8-8a4b-11ea-8096-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "a92e13c8-8a4b-11ea-8096-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "a92e13c8-8a4b-11ea-8096-54bf646e7e1f",
+                "location_in_feature": "EndFace"
+            },
+            {
+                "feature": "a92e13c8-8a4b-11ea-8096-54bf646e7e1f",
+                "location_in_feature": "StartFace"
+            }
+        ]
+    },
+    "features": {
+        "a92e13c8-8a4b-11ea-8096-54bf646e7e1f": {
+            "name": "Extrude1",
+            "type": "ExtrudeFeature",
+            "operation": "NewBodyFeatureOperation",
+            "timeline_index": 1
+        }
+    }
+}

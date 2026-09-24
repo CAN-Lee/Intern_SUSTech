@@ -1,0 +1,237 @@
+{
+    "metadata": {
+        "component_name": "Untitled"
+    },
+    "body": {
+        "properties": {
+            "name": "Body7",
+            "edge_count": 44,
+            "face_count": 25,
+            "shell_count": 1
+        },
+        "faces": [
+            {
+                "feature": "6fe3d87a-8a4a-11ea-8cfc-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "6fdf1d5a-8a4a-11ea-942c-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "6fd81876-8a4a-11ea-b8e7-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "6fd2c15c-8a4a-11ea-a5c5-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "6fcddf78-8a4a-11ea-91ad-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "6fc8fddc-8a4a-11ea-8a8f-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "6fc3a6a6-8a4a-11ea-8ba5-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "6fb79892-8a4a-11ea-98f1-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "6fb2b674-8a4a-11ea-90a4-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "6fadd488-8a4a-11ea-8aea-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "6fa8f2b4-8a4a-11ea-8741-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "6fa410e8-8a4a-11ea-8c18-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "6f9e445c-8a4a-11ea-b52d-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "6f996276-8a4a-11ea-8c09-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "6f95b8f6-8a4a-11ea-93e1-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "6f91c192-8a4a-11ea-90e8-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "6f8df128-8a4a-11ea-b294-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "6f89f98a-8a4a-11ea-a91c-54bf646e7e1f",
+                "location_in_feature": "EndFace"
+            },
+            {
+                "feature": "6f89f98a-8a4a-11ea-a91c-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "6f89f98a-8a4a-11ea-a91c-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "6f84c992-8a4a-11ea-805a-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "6f84c992-8a4a-11ea-805a-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "6f84c992-8a4a-11ea-805a-54bf646e7e1f",
+                "location_in_feature": "EndFace"
+            },
+            {
+                "feature": "6f7e8800-8a4a-11ea-80fc-54bf646e7e1f",
+                "location_in_feature": "EndFace"
+            },
+            {
+                "feature": "6f89f98a-8a4a-11ea-a91c-54bf646e7e1f",
+                "location_in_feature": "StartFace"
+            }
+        ]
+    },
+    "features": {
+        "6f7e8800-8a4a-11ea-80fc-54bf646e7e1f": {
+            "name": "Extrude15",
+            "type": "ExtrudeFeature",
+            "operation": "NewBodyFeatureOperation",
+            "timeline_index": 37
+        },
+        "6f84c992-8a4a-11ea-805a-54bf646e7e1f": {
+            "name": "Extrude16",
+            "type": "ExtrudeFeature",
+            "operation": "JoinFeatureOperation",
+            "timeline_index": 38
+        },
+        "6f89f98a-8a4a-11ea-a91c-54bf646e7e1f": {
+            "name": "Extrude17",
+            "type": "ExtrudeFeature",
+            "operation": "JoinFeatureOperation",
+            "timeline_index": 39
+        },
+        "6f8df128-8a4a-11ea-b294-54bf646e7e1f": {
+            "name": "Extrude18",
+            "type": "ExtrudeFeature",
+            "operation": "CutFeatureOperation",
+            "timeline_index": 41
+        },
+        "6f91c192-8a4a-11ea-90e8-54bf646e7e1f": {
+            "name": "Extrude19",
+            "type": "ExtrudeFeature",
+            "operation": "CutFeatureOperation",
+            "timeline_index": 44
+        },
+        "6f95b8f6-8a4a-11ea-93e1-54bf646e7e1f": {
+            "name": "Extrude20",
+            "type": "ExtrudeFeature",
+            "operation": "CutFeatureOperation",
+            "timeline_index": 47
+        },
+        "6f996276-8a4a-11ea-8c09-54bf646e7e1f": {
+            "name": "Extrude21",
+            "type": "ExtrudeFeature",
+            "operation": "CutFeatureOperation",
+            "timeline_index": 50
+        },
+        "6f9e445c-8a4a-11ea-b52d-54bf646e7e1f": {
+            "name": "Extrude22",
+            "type": "ExtrudeFeature",
+            "operation": "CutFeatureOperation",
+            "timeline_index": 52
+        },
+        "6fa410e8-8a4a-11ea-8c18-54bf646e7e1f": {
+            "name": "Extrude23",
+            "type": "ExtrudeFeature",
+            "operation": "CutFeatureOperation",
+            "timeline_index": 54
+        },
+        "6fa8f2b4-8a4a-11ea-8741-54bf646e7e1f": {
+            "name": "Extrude24",
+            "type": "ExtrudeFeature",
+            "operation": "CutFeatureOperation",
+            "timeline_index": 56
+        },
+        "6fadd488-8a4a-11ea-8aea-54bf646e7e1f": {
+            "name": "Extrude25",
+            "type": "ExtrudeFeature",
+            "operation": "CutFeatureOperation",
+            "timeline_index": 58
+        },
+        "6fb2b674-8a4a-11ea-90a4-54bf646e7e1f": {
+            "name": "Extrude26",
+            "type": "ExtrudeFeature",
+            "operation": "CutFeatureOperation",
+            "timeline_index": 60
+        },
+        "6fb79892-8a4a-11ea-98f1-54bf646e7e1f": {
+            "name": "Extrude27",
+            "type": "ExtrudeFeature",
+            "operation": "CutFeatureOperation",
+            "timeline_index": 62
+        },
+        "6fc3a6a6-8a4a-11ea-8ba5-54bf646e7e1f": {
+            "name": "Extrude28",
+            "type": "ExtrudeFeature",
+            "operation": "CutFeatureOperation",
+            "timeline_index": 64
+        },
+        "6fc8fddc-8a4a-11ea-8a8f-54bf646e7e1f": {
+            "name": "Extrude29",
+            "type": "ExtrudeFeature",
+            "operation": "CutFeatureOperation",
+            "timeline_index": 66
+        },
+        "6fcddf78-8a4a-11ea-91ad-54bf646e7e1f": {
+            "name": "Extrude30",
+            "type": "ExtrudeFeature",
+            "operation": "CutFeatureOperation",
+            "timeline_index": 68
+        },
+        "6fd2c15c-8a4a-11ea-a5c5-54bf646e7e1f": {
+            "name": "Extrude31",
+            "type": "ExtrudeFeature",
+            "operation": "CutFeatureOperation",
+            "timeline_index": 70
+        },
+        "6fd81876-8a4a-11ea-b8e7-54bf646e7e1f": {
+            "name": "Extrude32",
+            "type": "ExtrudeFeature",
+            "operation": "CutFeatureOperation",
+            "timeline_index": 72
+        },
+        "6fdf1d5a-8a4a-11ea-942c-54bf646e7e1f": {
+            "name": "Extrude33",
+            "type": "ExtrudeFeature",
+            "operation": "CutFeatureOperation",
+            "timeline_index": 74
+        },
+        "6fe3d87a-8a4a-11ea-8cfc-54bf646e7e1f": {
+            "name": "Extrude34",
+            "type": "ExtrudeFeature",
+            "operation": "CutFeatureOperation",
+            "timeline_index": 76
+        }
+    }
+}

@@ -1,0 +1,63 @@
+{
+    "metadata": {
+        "component_name": "Untitled"
+    },
+    "body": {
+        "properties": {
+            "name": "Body8",
+            "edge_count": 6,
+            "face_count": 7,
+            "shell_count": 1
+        },
+        "faces": [
+            {
+                "feature": "e420fe9b-8a4c-11ea-b3b1-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "e420fe9b-8a4c-11ea-b3b1-54bf646e7e1f",
+                "location_in_feature": "EndFace"
+            },
+            {
+                "feature": "e420fe9a-8a4c-11ea-b019-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "e420fe9a-8a4c-11ea-b019-54bf646e7e1f",
+                "location_in_feature": "EndFace"
+            },
+            {
+                "feature": "e420d78d-8a4c-11ea-9e82-54bf646e7e1f",
+                "location_in_feature": "SideFace"
+            },
+            {
+                "feature": "e420d78d-8a4c-11ea-9e82-54bf646e7e1f",
+                "location_in_feature": "EndFace"
+            },
+            {
+                "feature": "e420d78d-8a4c-11ea-9e82-54bf646e7e1f",
+                "location_in_feature": "StartFace"
+            }
+        ]
+    },
+    "features": {
+        "e420d78d-8a4c-11ea-9e82-54bf646e7e1f": {
+            "name": "Extrude10",
+            "type": "ExtrudeFeature",
+            "operation": "NewBodyFeatureOperation",
+            "timeline_index": 56
+        },
+        "e420fe9a-8a4c-11ea-b019-54bf646e7e1f": {
+            "name": "Extrude11",
+            "type": "ExtrudeFeature",
+            "operation": "JoinFeatureOperation",
+            "timeline_index": 58
+        },
+        "e420fe9b-8a4c-11ea-b3b1-54bf646e7e1f": {
+            "name": "Extrude12",
+            "type": "ExtrudeFeature",
+            "operation": "CutFeatureOperation",
+            "timeline_index": 60
+        }
+    }
+}

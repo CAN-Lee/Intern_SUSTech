@@ -1,0 +1,36 @@
+[
+  {
+    "stage": 1,
+    "candidates": [
+      {
+        "kind": "box",
+        "validation_mse": 0.0011949244062843872
+      },
+      {
+        "kind": "cylinder",
+        "validation_mse": 0.000464318023163058
+      },
+      {
+        "kind": "sphere",
+        "validation_mse": 0.018833000011788528
+      }
+    ],
+    "selected": "cylinder"
+  },
+  {
+    "stage": 2,
+    "best_kind": "sphere",
+    "best_op": "difference",
+    "prior_validation_mse": 0.000464318023163058,
+    "new_validation_mse": 0.00013883526623217733,
+    "status": "accepted"
+  },
+  {
+    "stage": 3,
+    "best_kind": "box",
+    "best_op": "difference",
+    "prior_validation_mse": 0.00013883526623217733,
+    "new_validation_mse": 7.060025830035231e-05,
+    "status": "accepted"
+  }
+]
