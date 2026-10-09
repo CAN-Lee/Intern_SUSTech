@@ -272,7 +272,11 @@ def pop_last_reasoning() -> str:
 def _c() -> OpenAI:
     global _client
     if _client is None:
-        _client = OpenAI(base_url="https://openrouter.ai/api/v1", api_key=_api_key())
+        compatible = os.environ.get("RSI_LLM_MODE") == "openai"
+        _client = OpenAI(
+            base_url=os.environ["RSI_LLM_BASE_URL"] if compatible else "https://openrouter.ai/api/v1",
+            api_key=os.environ.get("RSI_LLM_API_KEY", "local-gateway") if compatible else _api_key(),
+            timeout=float(os.environ.get("RSI_LLM_TIMEOUT", "120")), max_retries=0)
     return _client
 
 
@@ -327,14 +331,16 @@ def chat(model: str, system: str, user: str,
             "allow_fallbacks": bool(provider_allow_fallbacks),
             "require_parameters": bool(provider_require_parameters),
         }
-    if extra_body:
+    compatible = os.environ.get("RSI_LLM_MODE") == "openai"
+    if extra_body and not compatible:
         kwargs["extra_body"] = extra_body
     log = logging.getLogger("rsiagent.llm")
     resp = None
-    for attempt in range(4):                       # robust to TRANSIENT API errors (non-JSON body,
+    attempts = 3 if compatible else 4
+    for attempt in range(attempts):                       # robust to TRANSIENT API errors (non-JSON body,
         try:                                       # 5xx, rate-limit): a flaky response must not kill a run
             resp = _c().chat.completions.create(model=model, messages=messages,
-                                                max_tokens=max_tokens, temperature=temperature, **kwargs)
+                                                **({"max_completion_tokens": max_tokens} if compatible else {"max_tokens": max_tokens, "temperature": temperature}), **kwargs)
             if (getattr(resp, "error", None)
                     or not getattr(resp, "choices", None)):
                 raise _CompletionResponseError(resp)
@@ -348,7 +354,7 @@ def chat(model: str, system: str, user: str,
                             "embedded_code=%s error_type=%s", model,
                             e.body["id"], e.body["provider"], e.status_code,
                             metadata.get("error_type") if isinstance(metadata, dict) else None)
-            if kwargs and not order and not isinstance(e, _CompletionResponseError):
+            if not compatible and kwargs and not order and not isinstance(e, _CompletionResponseError):
                 # A returned error/empty completion is not evidence that optional
                 # fields are unsupported. Preserve the exact request on its retry.
                 log.warning("%s erred with optional request fields (%s); dropping them "
@@ -357,7 +363,7 @@ def chat(model: str, system: str, user: str,
                 continue
             body = getattr(e, "body", None)        # v35.1: surface the provider's actual
             detail = f" body={str(body)[:300]}" if body else ""  # complaint — a 400's
-            if attempt == 3:                       # class name alone hides the cause
+            if attempt == attempts - 1 or (compatible and not _recoverable_transport(e)):
                 status = _status_code(e)
                 recoverable = _recoverable_transport(e)
                 log.warning("%s failed after retries (%s)%s; raising %s transport "
@@ -374,6 +380,14 @@ def chat(model: str, system: str, user: str,
         cause = ValueError("response had no choices after retries")
         raise LLMTransportError(model, cause, recoverable=True,
                                 detail=str(cause)) from cause
+    usage_log = os.environ.get("RSI_LLM_USAGE_LOG")
+    if usage_log:
+        import json
+        record = {"time": time.time(), "model": model, "response_id": resp.id,
+                  "case": os.environ.get("RSI_LLM_CASE_ID"),
+                  "usage": resp.usage.model_dump() if resp.usage else None}
+        with open(usage_log, "a", encoding="utf-8") as usage_file:
+            usage_file.write(json.dumps(record) + "\n")
     provider = _response_provider(resp)
     model_counts = _PROVIDER_COUNTS.setdefault(model, {})
     model_counts[provider] = model_counts.get(provider, 0) + 1
@@ -414,7 +428,7 @@ def chat(model: str, system: str, user: str,
     txt = txt.strip()
     mandatory_reasoning = _reasoning_cannot_disable(model)
     retry_ceiling = 131072 if mandatory_reasoning else 40000
-    if truncated and max_tokens < retry_ceiling and (not txt or _looks_cut(txt)):
+    if not compatible and truncated and max_tokens < retry_ceiling and (not txt or _looks_cut(txt)):
         # TOKEN-LIMIT TRUNCATION: the reply hit the length cap with either NO visible
         # text (hidden reasoning ate the budget) or a program CUT MID-STREAM (its JSON
         # action never closed). A same-budget retry truncates identically — retry once

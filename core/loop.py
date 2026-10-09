@@ -511,7 +511,7 @@ def _call_with_transport_pause(call, cfg, *, label: str = "LLM",
         try:
             return call()
         except LLMTransportError as exc:
-            if not exc.recoverable:
+            if getattr(cfg, "llm_fail_fast", False) or not exc.recoverable:
                 log.error("%s transport failure is not recoverable: %s", label, exc)
                 raise
             status = (f"HTTP {exc.status_code}"

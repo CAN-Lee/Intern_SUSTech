@@ -559,7 +559,8 @@ def evolve_parallel_phase1(
         max_parallel: int = 4,
         target_query_conditioned: bool = False,
         resume_completed_boundary: bool = False,
-        park_verified_branches: bool = False) -> PracticeResult:
+        park_verified_branches: bool = False,
+        domain_adapter=None) -> PracticeResult:
     """Run persistent-Curriculum parallel waves until Agent saturation.
 
     ``project_budget`` is an undisclosed emergency boundary checked only between
@@ -579,6 +580,13 @@ def evolve_parallel_phase1(
            for value in checkpoint_projects):
         raise ValueError("checkpoint_projects must be nonnegative integers")
 
+    # Optional non-desktop domain adapter. Scheduling, wave barriers, sequential
+    # learning commits and durable lifecycle records remain owned by this module.
+    author_wave = domain_adapter.author_wave if domain_adapter else _author_wave
+    capture_fixtures = domain_adapter.capture_fixtures if domain_adapter else _capture_wave_fixtures
+    execute_branch = domain_adapter.execute_branch if domain_adapter else _execute_branch_with_infra_retry
+    commit_memory = domain_adapter.commit_memory if domain_adapter else _commit_branch_memory
+    push_memory = domain_adapter.push_memory if domain_adapter else _push_canonical_memory
     hooks = hooks or PracticeHooks()
     lineage = Path(root)
     memory_dir = lineage / "memory"
@@ -666,8 +674,8 @@ def evolve_parallel_phase1(
                 f"wave_{wave_index:03d}"
             curriculum_desktop, curriculum_vm = vm_factory()
             try:
-                _push_canonical_memory(hooks, curriculum_vm, str(memory_dir))
-                decision, curriculum_history = _author_wave(
+                push_memory(hooks, curriculum_vm, str(memory_dir))
+                decision, curriculum_history = author_wave(
                     hooks=hooks, vm=curriculum_vm, cfg=curriculum_cfg,
                     target_direction=target_direction,
                     previous_wave_outcomes=previous_wave_outcomes,
@@ -688,7 +696,7 @@ def evolve_parallel_phase1(
                     (project_index + offset, project,
                      episodes_dir / f"ep{project_index + offset:03d}")
                     for offset, project in enumerate(decision.projects, 1))
-                _capture_wave_fixtures(
+                capture_fixtures(
                     hooks=hooks, vm=curriculum_vm, decision=decision,
                     assignments=assignments,
                     target_direction=target_direction)
@@ -707,7 +715,7 @@ def evolve_parallel_phase1(
                     thread_name_prefix=f"phase1-wave-{wave_index}") as pool:
                 futures = {
                     pool.submit(
-                        _execute_branch_with_infra_retry, vm_factory=vm_factory, hooks=hooks,
+                        execute_branch, vm_factory=vm_factory, hooks=hooks,
                         project_index=index, project=project,
                         episode_dir=episode_dir,
                         wave_memory_dir=wave_memory_dir,
@@ -759,7 +767,7 @@ def evolve_parallel_phase1(
                     branch.desktop, branch.vm = vm_factory()
                     _replay(hooks, branch.vm,
                             str(branch.episode_dir / "candidates/cycle_001"))
-                memory_record = _commit_branch_memory(
+                memory_record = commit_memory(
                     branch=branch, hooks=hooks, memory_cfg=memory_cfg,
                     canonical_memory_dir=memory_dir,
                     journal_dir=journal_dir, corpus_path=corpus_path,
