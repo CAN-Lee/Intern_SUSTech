@@ -1,0 +1,51 @@
+{
+  "upstream_revision": "4d7ef43770dda341fccd9a5743db92407687c615",
+  "upstream_patch_sha256": "6c50ea2f707a4a6f8b41db4e8698626d6965287b901d21268ce4b6d91d9e6c97",
+  "source_hashes": {
+    "rsi_mesh/__init__.py": "1bf301b59285c14c230f92baf665156712a27d76f372d3867748741bfe7ed7d0",
+    "rsi_mesh/geometry.py": "166856de7e9019715722a88294b1049fac5844dcfcc3ffe863d1248336d4fccb",
+    "rsi_mesh/pipeline.py": "4929854273a19afa6a1df14b2ae05d45bee78bffbd7910a77f82559993c96d20",
+    "rsi_mesh/runtime.py": "cc1b73e0506d11bea23af4b47216643c867f445d89ee98d5a41438bb6421863d",
+    "configs/rsi_acceptance.yaml": "812eb1cc1afcbad7dbfef5d16752501b4eec78e991249d08bea7dae6884dd95e",
+    "configs/rsi_standard.yaml": "93ac1e39d5d4cd2edab1480f8763b5b1e75cee4d9f6da7a256d881b569bf4d16",
+    "docker/rsi.Dockerfile": "c1672b4b89809ec3695dfe7ba927d1f2b1e914fbd9377f708b15dd88cc4de31a",
+    "run_rsi.py": "a703cc4d8a8416664d6b5dc33b9bc563a843d877943fd9fa481a47f6053cf36e"
+  },
+  "config": {
+    "schema_version": 1,
+    "model": "azure/gpt-5.6-sol",
+    "base_url": "http://127.0.0.1:9000/v1",
+    "api_key_env": "RSI_GATEWAY_API_KEY",
+    "api_key_default": "local-gateway",
+    "image": "mesh-rsi:verified",
+    "max_primitives": 24,
+    "max_depth": 12,
+    "brs_projects": 8,
+    "parallel": 2,
+    "drs_cycles": 4,
+    "drs_projects": 8,
+    "learning_seconds": 7200,
+    "final_seconds": 1800,
+    "max_completion_tokens": 16384,
+    "request_timeout": 120,
+    "agent_turns": 80,
+    "script_timeout": 300,
+    "seed": 42,
+    "pass_iou": 0.95,
+    "pass_p95_relative": 0.01,
+    "verification_grid": 64,
+    "final_grid": 96,
+    "container_cpus": 4,
+    "container_memory": "8g"
+  },
+  "host_packages": {
+    "numpy": "1.26.4",
+    "scipy": "1.15.3",
+    "trimesh": "5.1.0",
+    "embreex": "2.17.7",
+    "scikit-image": "0.25.2",
+    "rtree": "1.4.1",
+    "openai": "3.26.1",
+    "PyYAML": "6.0.3"
+  }
+}

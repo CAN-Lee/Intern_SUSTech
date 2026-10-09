@@ -1,0 +1,30 @@
+{"time": 1791538285.9745195, "event": "PROTOCOL_OPENED", "payload": {"resume": false}}
+{"time": 1791538285.9747214, "event": "PHASE1_STARTED", "payload": {}}
+{"time": 1791538333.3372123, "event": "PHASE1_WAVE_STARTED", "payload": {"wave": 1, "projects": 2, "memory_manifest": {}, "max_parallel": 2}}
+{"time": 1791538487.529158, "event": "PHASE1_BRANCH_VERIFIED", "payload": {"wave": 1, "project": 1, "project_id": "tapered-ported-nozzle", "terminal_outcome": "PASS"}}
+{"time": 1791538801.7100952, "event": "PHASE1_BRANCH_VERIFIED", "payload": {"wave": 1, "project": 2, "project_id": "orthogonal-hollow-manifold", "terminal_outcome": "PASS"}}
+{"time": 1791538860.8375306, "event": "MEMORY_COMMITTED", "payload": {"before": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a", "after": "a8a124d6476c340f4ecd3648f9a8da02f44b2332f142f5a238bd2a5c35a9827e", "verdict": "PASS"}}
+{"time": 1791538861.384283, "event": "PHASE1_BRANCH_MEMORY_COMMITTED", "payload": {"wave": 1, "project": 1, "project_id": "tapered-ported-nozzle", "terminal_outcome": "PASS", "memory_changes": {"coaxial_csg_workflow.md": "added"}}}
+{"time": 1791538978.468548, "event": "MEMORY_COMMITTED", "payload": {"before": "a8a124d6476c340f4ecd3648f9a8da02f44b2332f142f5a238bd2a5c35a9827e", "after": "6ec0a343fa7677ac8f7e1475eff7f582746e6d60da0af1be5cabead9e6b44f8d", "verdict": "PASS"}}
+{"time": 1791538978.6826544, "event": "PHASE1_BRANCH_MEMORY_COMMITTED", "payload": {"wave": 1, "project": 2, "project_id": "orthogonal-hollow-manifold", "terminal_outcome": "PASS", "memory_changes": {"mesh_csg_workflows.md": "added"}}}
+{"time": 1791538978.6876967, "event": "PHASE1_WAVE_COMPLETED", "payload": {"wave": 1, "projects": 2, "total_projects": 2}}
+{"time": 1791539022.2843947, "event": "PHASE1_WAVE_STARTED", "payload": {"wave": 2, "projects": 2, "memory_manifest": {"mesh_csg_workflows.md": {"bytes": 9252, "sha256": "fe176c60195e3313837d62e33ed9e044f3b4a20cc83bb2711e5e14d2ca031977"}}, "max_parallel": 2}}
+{"time": 1791539214.7818677, "event": "PHASE1_BRANCH_VERIFIED", "payload": {"wave": 2, "project": 4, "project_id": "grooved-perforated-pulley", "terminal_outcome": "PASS"}}
+{"time": 1791539360.3177352, "event": "PHASE1_BRANCH_VERIFIED", "payload": {"wave": 2, "project": 3, "project_id": "lugged-counterbore-pedestal", "terminal_outcome": "PASS"}}
+{"time": 1791539525.8938732, "event": "MEMORY_COMMITTED", "payload": {"before": "6ec0a343fa7677ac8f7e1475eff7f582746e6d60da0af1be5cabead9e6b44f8d", "after": "213eb91a778065e7722bfb98b9ab588de84410e21134423b4f2d0d9725a111e0", "verdict": "PASS"}}
+{"time": 1791539526.1002827, "event": "PHASE1_BRANCH_MEMORY_COMMITTED", "payload": {"wave": 2, "project": 3, "project_id": "lugged-counterbore-pedestal", "terminal_outcome": "PASS", "memory_changes": {"mesh_csg_workflows.md": "changed"}}}
+{"time": 1791539591.4363492, "event": "MEMORY_COMMITTED", "payload": {"before": "213eb91a778065e7722bfb98b9ab588de84410e21134423b4f2d0d9725a111e0", "after": "76d309d3b035eac746b23ba07d01bf7ace9a217f52bca07f4e1bed41b0b45491", "verdict": "PASS"}}
+{"time": 1791539591.6826284, "event": "PHASE1_BRANCH_MEMORY_COMMITTED", "payload": {"wave": 2, "project": 4, "project_id": "grooved-perforated-pulley", "terminal_outcome": "PASS", "memory_changes": {"mesh_csg_workflows.md": "changed"}}}
+{"time": 1791539591.6870177, "event": "PHASE1_WAVE_COMPLETED", "payload": {"wave": 2, "projects": 2, "total_projects": 4}}
+{"time": 1791539603.064918, "event": "PHASE2_STARTED", "payload": {}}
+{"time": 1791539603.3817613, "event": "TARGET_STARTED", "payload": {"target_cycle": 1, "evolutions": 0, "final_after_curriculum_stall": false}}
+{"time": 1791539690.60662, "event": "TARGET_VERIFIED", "payload": {"target_cycle": 1, "verdict": "PASS"}}
+{"time": 1791539690.606813, "event": "TARGET_LEARNING_STARTED", "payload": {"target_cycle": 1, "verdict": "PASS", "evolutions": 0}}
+{"time": 1791539752.5315948, "event": "MEMORY_COMMITTED", "payload": {"before": "76d309d3b035eac746b23ba07d01bf7ace9a217f52bca07f4e1bed41b0b45491", "after": "bbd989349ffa3ddf491031ae1f01d7108f939941620229299d82bce88f6430ad", "verdict": "PASS"}}
+{"time": 1791539752.5319188, "event": "TARGET_LEARNING_COMPLETED", "payload": {"target_cycle": 1, "verdict": "PASS", "evolutions": 0}}
+{"time": 1791539752.5320077, "event": "PASS_NEXT_EXPERIENCE_REVIEW_STARTED", "payload": {"target_cycle": 1, "prospective_evolution": 1}}
+{"time": 1791539766.2378018, "event": "PASS_NEXT_EXPERIENCE_REVIEW_COMPLETED", "payload": {"target_cycle": 1, "projects": 0, "reason": "The verified reconstruction already passes all structural and geometric requirements by wide margins: IoU is 0.996659, relative symmetric surface P95 is 0.000704, and the exported mesh is watertight and single-component. Its compact three-cylinder construction is valid and well within complexity limits. The only reported discrepancies are minor tessellation and volume effects that do not indicate a missing CSG skill, so further synthetic practice would not be useful for this target.", "termination": "verifier_pass_curriculum_ready"}}
+{"time": 1791539766.23796, "event": "TARGET_LOOP_TERMINATED", "payload": {"target_cycle": 1, "verdict": "PASS", "termination": "verifier_pass_curriculum_ready", "evolutions": 0}}
+{"time": 1791539766.4933975, "event": "PHASE3_STARTED", "payload": {"memory_hash": "bbd989349ffa3ddf491031ae1f01d7108f939941620229299d82bce88f6430ad"}}
+{"time": 1791539880.7291996, "event": "SEALED_EVALUATION_STARTED", "payload": {}}
+{"time": 1791539886.196787, "event": "PROTOCOL_FINISHED", "payload": {"status": "completed"}}

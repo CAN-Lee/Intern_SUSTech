@@ -1,5 +1,10 @@
 # 从 Mesh 拟合隐式 CAD 基元
 
+## 完整 RSI pipeline
+
+完整 RSIAgent 三阶段重建入口为 `run_rsi.py`；部署、运行、记忆与验证边界见
+[RSI 使用说明](RSI_README.md)。它使用独立的 `rsi_runs/` 保存新实验，以下内容保留为原始数值拟合基线。
+
 本目录用于把输入 Mesh 近似为少量基元构成的隐式 CSG 组合。
 
 - `fusion360_gallery/`：从 Autodesk Fusion 360 Gallery Dataset 提取的 9 个 OBJ 案例，按简单、中等、困难分组；来源和许可证见[案例说明](fusion360_gallery/README.md)。

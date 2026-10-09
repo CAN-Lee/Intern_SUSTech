@@ -1,0 +1,30 @@
+{"time": 1791532451.6620483, "event": "PROTOCOL_OPENED", "payload": {"resume": false}}
+{"time": 1791532451.662446, "event": "PHASE1_STARTED", "payload": {}}
+{"time": 1791532520.9797702, "event": "PHASE1_WAVE_STARTED", "payload": {"wave": 1, "projects": 2, "memory_manifest": {}, "max_parallel": 2}}
+{"time": 1791532648.3171318, "event": "PHASE1_BRANCH_VERIFIED", "payload": {"wave": 1, "project": 2, "project_id": "open-ring-handle", "terminal_outcome": "PASS"}}
+{"time": 1791532675.7543466, "event": "PHASE1_BRANCH_VERIFIED", "payload": {"wave": 1, "project": 1, "project_id": "stepped-crossbores", "terminal_outcome": "PASS"}}
+{"time": 1791532730.2414706, "event": "MEMORY_COMMITTED", "payload": {"before": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a", "after": "fc9a756a1189a480ab5fa0d78bdea6926c8240f8bc2a83aeb7c0c12cfc65348c", "verdict": "PASS"}}
+{"time": 1791532730.3775616, "event": "PHASE1_BRANCH_MEMORY_COMMITTED", "payload": {"wave": 1, "project": 1, "project_id": "stepped-crossbores", "terminal_outcome": "PASS", "memory_changes": {"compact_stepped_solids.md": "added"}}}
+{"time": 1791532789.70532, "event": "MEMORY_COMMITTED", "payload": {"before": "fc9a756a1189a480ab5fa0d78bdea6926c8240f8bc2a83aeb7c0c12cfc65348c", "after": "3ef4629ec57b88e94a9c3cc21d7ef3751d19dd7b574f990ee8082458ecb278b2", "verdict": "PASS"}}
+{"time": 1791532789.8939323, "event": "PHASE1_BRANCH_MEMORY_COMMITTED", "payload": {"wave": 1, "project": 2, "project_id": "open-ring-handle", "terminal_outcome": "PASS", "memory_changes": {"README.md": "added", "open_curved_jaws.md": "added"}}}
+{"time": 1791532789.897443, "event": "PHASE1_WAVE_COMPLETED", "payload": {"wave": 1, "projects": 2, "total_projects": 2}}
+{"time": 1791532864.9408855, "event": "PHASE1_WAVE_STARTED", "payload": {"wave": 2, "projects": 2, "memory_manifest": {"README.md": {"bytes": 726, "sha256": "aed1cf0627d0dfcd61f53dcb08e57ec3844a4540b0f8d4e8dad25ea524f37737"}, "compact_stepped_solids.md": {"bytes": 4704, "sha256": "fc81c0fa2ef96ffac081f102d3265b2c1030de429f286f07abee24dc81f29336"}, "open_curved_jaws.md": {"bytes": 6115, "sha256": "02f7679a354facee5e8b6e8c720385c0137219f220c8c97808f61e45ac51f8cf"}}, "max_parallel": 2}}
+{"time": 1791532972.7971592, "event": "PHASE1_BRANCH_VERIFIED", "payload": {"wave": 2, "project": 4, "project_id": "tapered-oblique-port", "terminal_outcome": "PASS"}}
+{"time": 1791533107.4766073, "event": "PHASE1_BRANCH_VERIFIED", "payload": {"wave": 2, "project": 3, "project_id": "stepped-hub-flange", "terminal_outcome": "PASS"}}
+{"time": 1791533164.568273, "event": "MEMORY_COMMITTED", "payload": {"before": "3ef4629ec57b88e94a9c3cc21d7ef3751d19dd7b574f990ee8082458ecb278b2", "after": "89d287355b844ee40e39e3f6d667e3c272b535c7167fde9840f8ca074532b0f4", "verdict": "PASS"}}
+{"time": 1791533164.6888835, "event": "PHASE1_BRANCH_MEMORY_COMMITTED", "payload": {"wave": 2, "project": 3, "project_id": "stepped-hub-flange", "terminal_outcome": "PASS", "memory_changes": {"README.md": "changed", "lobed_flange_counterbores.md": "added"}}}
+{"time": 1791533237.1179395, "event": "MEMORY_COMMITTED", "payload": {"before": "89d287355b844ee40e39e3f6d667e3c272b535c7167fde9840f8ca074532b0f4", "after": "c78b8614b013d767380a510465dfad17addc5d42067564f512da09f260e12f95", "verdict": "PASS"}}
+{"time": 1791533237.2469366, "event": "PHASE1_BRANCH_MEMORY_COMMITTED", "payload": {"wave": 2, "project": 4, "project_id": "tapered-oblique-port", "terminal_outcome": "PASS", "memory_changes": {"README.md": "changed", "tapered_uprights_slanted_passages.md": "added"}}}
+{"time": 1791533237.2495723, "event": "PHASE1_WAVE_COMPLETED", "payload": {"wave": 2, "projects": 2, "total_projects": 4}}
+{"time": 1791533249.9798758, "event": "PHASE2_STARTED", "payload": {}}
+{"time": 1791533250.180953, "event": "TARGET_STARTED", "payload": {"target_cycle": 1, "evolutions": 0, "final_after_curriculum_stall": false}}
+{"time": 1791533377.2473986, "event": "TARGET_VERIFIED", "payload": {"target_cycle": 1, "verdict": "PASS"}}
+{"time": 1791533377.2477174, "event": "TARGET_LEARNING_STARTED", "payload": {"target_cycle": 1, "verdict": "PASS", "evolutions": 0}}
+{"time": 1791533437.6724253, "event": "MEMORY_COMMITTED", "payload": {"before": "c78b8614b013d767380a510465dfad17addc5d42067564f512da09f260e12f95", "after": "b8f967a26791f93094e972b00448e3f7009f5db0df8ee032deddc59220961890", "verdict": "PASS"}}
+{"time": 1791533437.6731045, "event": "TARGET_LEARNING_COMPLETED", "payload": {"target_cycle": 1, "verdict": "PASS", "evolutions": 0}}
+{"time": 1791533437.6732397, "event": "PASS_NEXT_EXPERIENCE_REVIEW_STARTED", "payload": {"target_cycle": 1, "prospective_evolution": 1}}
+{"time": 1791533444.7456899, "event": "PASS_NEXT_EXPERIENCE_REVIEW_COMPLETED", "payload": {"target_cycle": 1, "projects": 0, "reason": "Verified reconstruction already exceeds all acceptance requirements by wide margins: voxel IoU is 0.999375906, relative symmetric surface-distance P95 remains below 0.000724 across independent high-sample evaluations, and the exported result is watertight, connected, positive-volume, schema-valid, and minimal at two primitive leaves. The minor area and volume differences are far below required tolerances, so further synthetic practice would not productively address an unmet reconstruction skill.", "termination": "verifier_pass_curriculum_ready"}}
+{"time": 1791533444.745815, "event": "TARGET_LOOP_TERMINATED", "payload": {"target_cycle": 1, "verdict": "PASS", "termination": "verifier_pass_curriculum_ready", "evolutions": 0}}
+{"time": 1791533444.919208, "event": "PHASE3_STARTED", "payload": {"memory_hash": "b8f967a26791f93094e972b00448e3f7009f5db0df8ee032deddc59220961890"}}
+{"time": 1791533605.9510202, "event": "SEALED_EVALUATION_STARTED", "payload": {}}
+{"time": 1791533610.8076262, "event": "PROTOCOL_FINISHED", "payload": {"status": "completed"}}

@@ -1,0 +1,3 @@
+{"time": 1791533611.5520344, "event": "PROTOCOL_OPENED", "payload": {"resume": false}}
+{"time": 1791533611.5521994, "event": "PHASE1_STARTED", "payload": {}}
+{"time": 1791533666.959376, "event": "PROTOCOL_FINISHED", "payload": {"status": "infrastructure_error"}}

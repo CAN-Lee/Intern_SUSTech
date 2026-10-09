@@ -1,0 +1,209 @@
+{
+  "schema_version": 1,
+  "root": {
+    "op": "union",
+    "children": [
+      {
+        "op": "union",
+        "children": [
+          {
+            "op": "union",
+            "children": [
+              {
+                "kind": "cylinder",
+                "center": [
+                  0,
+                  0,
+                  0.1071425
+                ],
+                "rotation": [
+                  0,
+                  0,
+                  0
+                ],
+                "size": [
+                  0.691303,
+                  0.7367725
+                ]
+              },
+              {
+                "op": "difference",
+                "children": [
+                  {
+                    "kind": "cylinder",
+                    "center": [
+                      0,
+                      0,
+                      -0.656085
+                    ],
+                    "rotation": [
+                      0,
+                      0,
+                      0
+                    ],
+                    "size": [
+                      0.638681,
+                      0.026455
+                    ]
+                  },
+                  {
+                    "kind": "cylinder",
+                    "center": [
+                      0,
+                      0,
+                      -0.656085
+                    ],
+                    "rotation": [
+                      0,
+                      0,
+                      0
+                    ],
+                    "size": [
+                      0.392,
+                      0.027
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "op": "difference",
+            "children": [
+              {
+                "op": "intersection",
+                "children": [
+                  {
+                    "kind": "cone",
+                    "center": [
+                      0,
+                      0,
+                      -0.84127
+                    ],
+                    "rotation": [
+                      0,
+                      0,
+                      0
+                    ],
+                    "size": [
+                      0.168,
+                      0.176122,
+                      0.15873
+                    ]
+                  },
+                  {
+                    "kind": "box",
+                    "center": [
+                      -0.088061,
+                      0,
+                      -0.84127
+                    ],
+                    "rotation": [
+                      0,
+                      0,
+                      0
+                    ],
+                    "size": [
+                      0.088061,
+                      0.3,
+                      0.17
+                    ]
+                  }
+                ]
+              },
+              {
+                "kind": "cone",
+                "center": [
+                  0,
+                  0,
+                  -0.84127
+                ],
+                "rotation": [
+                  0,
+                  0,
+                  0
+                ],
+                "size": [
+                  0.077,
+                  0.066,
+                  0.16
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "op": "union",
+        "children": [
+          {
+            "kind": "cone",
+            "center": [
+              0,
+              0,
+              0.8478835
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "size": [
+              0.691303,
+              0.3885,
+              0.0039685
+            ]
+          },
+          {
+            "op": "intersection",
+            "children": [
+              {
+                "kind": "cylinder",
+                "center": [
+                  0,
+                  0,
+                  0.925926
+                ],
+                "rotation": [
+                  0,
+                  0,
+                  0
+                ],
+                "size": [
+                  0.3885,
+                  0.074074
+                ]
+              },
+              {
+                "kind": "box",
+                "center": [
+                  0,
+                  0,
+                  0.925926
+                ],
+                "rotation": [
+                  0,
+                  0,
+                  0
+                ],
+                "size": [
+                  0.5,
+                  0.249033,
+                  0.08
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "normalization": {
+    "center": [
+      0.0,
+      0.0,
+      0.0
+    ],
+    "scale": 0.9999999776482582
+  }
+}

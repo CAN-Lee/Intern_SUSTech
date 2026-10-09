@@ -1,0 +1,6 @@
+Traceback (most recent call last):
+  File "/data/lican/Intern_SUSTech/experiments/mesh_to_implicit_primitives/rsi_mesh/pipeline.py", line 380, in run
+    self.event("PHASE1_STARTED"); statuses["phase1"]=self.phase1()
+  File "/data/lican/Intern_SUSTech/experiments/mesh_to_implicit_primitives/rsi_mesh/pipeline.py", line 253, in phase1
+    raise RuntimeError(result.reason)
+RuntimeError: ValueError: Export is not watertight

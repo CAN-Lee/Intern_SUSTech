@@ -1,0 +1,35 @@
+Traceback (most recent call last):
+  File "/data/lican/Intern_SUSTech/submodule/RSIAgent/llm/client.py", line 342, in chat
+    resp = _c().chat.completions.create(model=model, messages=messages,
+  File "/data/lican/Intern_SUSTech/experiments/mesh_to_implicit_primitives/.venv-rsi/lib/python3.10/site-packages/openai/_utils/_utils.py", line 298, in wrapper
+    return func(*args, **kwargs)
+  File "/data/lican/Intern_SUSTech/experiments/mesh_to_implicit_primitives/.venv-rsi/lib/python3.10/site-packages/openai/resources/chat/completions/completions.py", line 1318, in create
+    return self._post(
+  File "/data/lican/Intern_SUSTech/experiments/mesh_to_implicit_primitives/.venv-rsi/lib/python3.10/site-packages/openai/_base_client.py", line 1440, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "/data/lican/Intern_SUSTech/experiments/mesh_to_implicit_primitives/.venv-rsi/lib/python3.10/site-packages/openai/_base_client.py", line 1213, in request
+    raise self._make_status_error_from_response(err.response) from None
+openai.InternalServerError: Error code: 502 - {'detail': '<html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unavailable</h1></center>\r\n</body>\r\n</html>'}
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "/data/lican/Intern_SUSTech/experiments/mesh_to_implicit_primitives/rsi_mesh/pipeline.py", line 385, in run
+    measurements=self.phase3()
+  File "/data/lican/Intern_SUSTech/experiments/mesh_to_implicit_primitives/rsi_mesh/pipeline.py", line 332, in phase3
+    self.work(actor,vm,instruction)
+  File "/data/lican/Intern_SUSTech/experiments/mesh_to_implicit_primitives/rsi_mesh/pipeline.py", line 159, in work
+    actor.run(instruction,vm)
+  File "/data/lican/Intern_SUSTech/experiments/mesh_to_implicit_primitives/rsi_mesh/runtime.py", line 178, in run
+    result, self.history = run_attempt(prompt, vm, cfg, sink, initial_history=self.history,
+  File "/data/lican/Intern_SUSTech/submodule/RSIAgent/core/loop.py", line 991, in run_attempt
+    out = _llm_operation(
+  File "/data/lican/Intern_SUSTech/submodule/RSIAgent/core/loop.py", line 617, in _llm_operation
+    return _call_with_transport_pause(
+  File "/data/lican/Intern_SUSTech/submodule/RSIAgent/core/loop.py", line 512, in _call_with_transport_pause
+    return call()
+  File "/data/lican/Intern_SUSTech/submodule/RSIAgent/core/loop.py", line 993, in <lambda>
+    lambda: chat(
+  File "/data/lican/Intern_SUSTech/submodule/RSIAgent/llm/client.py", line 372, in chat
+    raise LLMTransportError(
+llm.client.LLMTransportError: azure/gpt-5.6-sol transport failure HTTP 502: {'detail': '<html>\r\n<head><title>503 Service Temporarily Unavailable</title></head>\r\n<body>\r\n<center><h1>503 Service Temporarily Unavailable</h1></center>\r\n</body>\r\n</html>'}

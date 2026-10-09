@@ -1,0 +1,26 @@
+{"time": 1791533667.8937664, "event": "PROTOCOL_OPENED", "payload": {"resume": false}}
+{"time": 1791533667.894116, "event": "PHASE1_STARTED", "payload": {}}
+{"time": 1791533845.8980165, "event": "PHASE1_WAVE_STARTED", "payload": {"wave": 1, "projects": 2, "memory_manifest": {}, "max_parallel": 2}}
+{"time": 1791533980.4343724, "event": "PHASE1_BRANCH_VERIFIED", "payload": {"wave": 1, "project": 1, "project_id": "tiered-profile", "terminal_outcome": "PASS"}}
+{"time": 1791534059.2495925, "event": "PHASE1_BRANCH_VERIFIED", "payload": {"wave": 1, "project": 2, "project_id": "open-shell", "terminal_outcome": "PASS"}}
+{"time": 1791534105.560244, "event": "MEMORY_COMMITTED", "payload": {"before": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a", "after": "e79660496f361d87456b033d83da33bba1a08e1323b5622f94020cd7a0be559c", "verdict": "PASS"}}
+{"time": 1791534105.740425, "event": "PHASE1_BRANCH_MEMORY_COMMITTED", "payload": {"wave": 1, "project": 1, "project_id": "tiered-profile", "terminal_outcome": "PASS", "memory_changes": {"axial_csg_workflow.md": "added"}}}
+{"time": 1791534169.115529, "event": "MEMORY_COMMITTED", "payload": {"before": "e79660496f361d87456b033d83da33bba1a08e1323b5622f94020cd7a0be559c", "after": "c6cfa1db4dd8a99b4e6eee86c4f2dd356f1ae60cdae38db4462d6668fa79b933", "verdict": "PASS"}}
+{"time": 1791534169.3731468, "event": "PHASE1_BRANCH_MEMORY_COMMITTED", "payload": {"wave": 1, "project": 2, "project_id": "open-shell", "terminal_outcome": "PASS", "memory_changes": {"README.md": "added", "exposed_cavity_shells.md": "added"}}}
+{"time": 1791534169.3765514, "event": "PHASE1_WAVE_COMPLETED", "payload": {"wave": 1, "projects": 2, "total_projects": 2}}
+{"time": 1791534211.7026336, "event": "PHASE1_WAVE_STARTED", "payload": {"wave": 2, "projects": 1, "memory_manifest": {"README.md": {"bytes": 1558, "sha256": "55823aecc7dffa0aa49f0bfcbf470de98b9d6be318f6d4f5fd2311be1e56de08"}, "axial_csg_workflow.md": {"bytes": 6099, "sha256": "8f63b0f425845cde5913865c8a9f658e90a1da56a094d2527908c548917c79e1"}, "exposed_cavity_shells.md": {"bytes": 6176, "sha256": "004ae9c6025bd3a80302c38a753ed31e451014295d363b40870e7f61936be0ea"}}, "max_parallel": 2}}
+{"time": 1791534370.5122557, "event": "PHASE1_BRANCH_VERIFIED", "payload": {"wave": 2, "project": 3, "project_id": "radial-repeat", "terminal_outcome": "PASS"}}
+{"time": 1791534434.9038692, "event": "MEMORY_COMMITTED", "payload": {"before": "c6cfa1db4dd8a99b4e6eee86c4f2dd356f1ae60cdae38db4462d6668fa79b933", "after": "736f7f24b141aa249503e11866923e2e79ddb4b5b703b5c5784aef3331393d22", "verdict": "PASS"}}
+{"time": 1791534435.0454037, "event": "PHASE1_BRANCH_MEMORY_COMMITTED", "payload": {"wave": 2, "project": 3, "project_id": "radial-repeat", "terminal_outcome": "PASS", "memory_changes": {"README.md": "changed", "radial_repetition_workflow.md": "added"}}}
+{"time": 1791534435.0495973, "event": "PHASE1_WAVE_COMPLETED", "payload": {"wave": 2, "projects": 1, "total_projects": 3}}
+{"time": 1791534447.2180986, "event": "PHASE2_STARTED", "payload": {}}
+{"time": 1791534447.4041896, "event": "TARGET_STARTED", "payload": {"target_cycle": 1, "evolutions": 0, "final_after_curriculum_stall": false}}
+{"time": 1791534652.6407979, "event": "TARGET_VERIFIED", "payload": {"target_cycle": 1, "verdict": "PASS"}}
+{"time": 1791534652.6412513, "event": "TARGET_LEARNING_STARTED", "payload": {"target_cycle": 1, "verdict": "PASS", "evolutions": 0}}
+{"time": 1791534708.0976157, "event": "MEMORY_COMMITTED", "payload": {"before": "736f7f24b141aa249503e11866923e2e79ddb4b5b703b5c5784aef3331393d22", "after": "225086fcd6ded653f1db3619e07b562a2b0c68546cdf83c34ba7ff7950589a50", "verdict": "PASS"}}
+{"time": 1791534708.0988533, "event": "TARGET_LEARNING_COMPLETED", "payload": {"target_cycle": 1, "verdict": "PASS", "evolutions": 0}}
+{"time": 1791534708.099095, "event": "PASS_NEXT_EXPERIENCE_REVIEW_STARTED", "payload": {"target_cycle": 1, "prospective_evolution": 1}}
+{"time": 1791534717.374525, "event": "PASS_NEXT_EXPERIENCE_REVIEW_COMPLETED", "payload": {"target_cycle": 1, "projects": 0, "reason": "Independent verification already shows the frozen reconstruction passes every acceptance requirement with substantial margin: voxel IoU 0.96663 exceeds 0.95, relative symmetric surface P95 is about 0.00738 below 0.01, and the exported mesh is watertight, connected, nonempty, and schema-compliant. The remaining approximation error is non-blocking, so additional synthetic prerequisite or stress practice is not useful for acceptance.", "termination": "verifier_pass_curriculum_ready"}}
+{"time": 1791534717.3747263, "event": "TARGET_LOOP_TERMINATED", "payload": {"target_cycle": 1, "verdict": "PASS", "termination": "verifier_pass_curriculum_ready", "evolutions": 0}}
+{"time": 1791534717.577104, "event": "PHASE3_STARTED", "payload": {"memory_hash": "225086fcd6ded653f1db3619e07b562a2b0c68546cdf83c34ba7ff7950589a50"}}
+{"time": 1791534759.7547345, "event": "PROTOCOL_FINISHED", "payload": {"status": "infrastructure_error"}}

@@ -1,0 +1,158 @@
+diff --git a/core/loop.py b/core/loop.py
+index f6ba914..e3ee287 100644
+--- a/core/loop.py
++++ b/core/loop.py
+@@ -511,7 +511,7 @@ def _call_with_transport_pause(call, cfg, *, label: str = "LLM",
+         try:
+             return call()
+         except LLMTransportError as exc:
+-            if not exc.recoverable:
++            if getattr(cfg, "llm_fail_fast", False) or not exc.recoverable:
+                 log.error("%s transport failure is not recoverable: %s", label, exc)
+                 raise
+             status = (f"HTTP {exc.status_code}"
+diff --git a/explore/phase1_wave.py b/explore/phase1_wave.py
+index f476c08..9d1e964 100644
+--- a/explore/phase1_wave.py
++++ b/explore/phase1_wave.py
+@@ -559,7 +559,8 @@ def evolve_parallel_phase1(
+         max_parallel: int = 4,
+         target_query_conditioned: bool = False,
+         resume_completed_boundary: bool = False,
+-        park_verified_branches: bool = False) -> PracticeResult:
++        park_verified_branches: bool = False,
++        domain_adapter=None) -> PracticeResult:
+     """Run persistent-Curriculum parallel waves until Agent saturation.
+ 
+     ``project_budget`` is an undisclosed emergency boundary checked only between
+@@ -579,6 +580,13 @@ def evolve_parallel_phase1(
+            for value in checkpoint_projects):
+         raise ValueError("checkpoint_projects must be nonnegative integers")
+ 
++    # Optional non-desktop domain adapter. Scheduling, wave barriers, sequential
++    # learning commits and durable lifecycle records remain owned by this module.
++    author_wave = domain_adapter.author_wave if domain_adapter else _author_wave
++    capture_fixtures = domain_adapter.capture_fixtures if domain_adapter else _capture_wave_fixtures
++    execute_branch = domain_adapter.execute_branch if domain_adapter else _execute_branch_with_infra_retry
++    commit_memory = domain_adapter.commit_memory if domain_adapter else _commit_branch_memory
++    push_memory = domain_adapter.push_memory if domain_adapter else _push_canonical_memory
+     hooks = hooks or PracticeHooks()
+     lineage = Path(root)
+     memory_dir = lineage / "memory"
+@@ -666,8 +674,8 @@ def evolve_parallel_phase1(
+                 f"wave_{wave_index:03d}"
+             curriculum_desktop, curriculum_vm = vm_factory()
+             try:
+-                _push_canonical_memory(hooks, curriculum_vm, str(memory_dir))
+-                decision, curriculum_history = _author_wave(
++                push_memory(hooks, curriculum_vm, str(memory_dir))
++                decision, curriculum_history = author_wave(
+                     hooks=hooks, vm=curriculum_vm, cfg=curriculum_cfg,
+                     target_direction=target_direction,
+                     previous_wave_outcomes=previous_wave_outcomes,
+@@ -688,7 +696,7 @@ def evolve_parallel_phase1(
+                     (project_index + offset, project,
+                      episodes_dir / f"ep{project_index + offset:03d}")
+                     for offset, project in enumerate(decision.projects, 1))
+-                _capture_wave_fixtures(
++                capture_fixtures(
+                     hooks=hooks, vm=curriculum_vm, decision=decision,
+                     assignments=assignments,
+                     target_direction=target_direction)
+@@ -707,7 +715,7 @@ def evolve_parallel_phase1(
+                     thread_name_prefix=f"phase1-wave-{wave_index}") as pool:
+                 futures = {
+                     pool.submit(
+-                        _execute_branch_with_infra_retry, vm_factory=vm_factory, hooks=hooks,
++                        execute_branch, vm_factory=vm_factory, hooks=hooks,
+                         project_index=index, project=project,
+                         episode_dir=episode_dir,
+                         wave_memory_dir=wave_memory_dir,
+@@ -759,7 +767,7 @@ def evolve_parallel_phase1(
+                     branch.desktop, branch.vm = vm_factory()
+                     _replay(hooks, branch.vm,
+                             str(branch.episode_dir / "candidates/cycle_001"))
+-                memory_record = _commit_branch_memory(
++                memory_record = commit_memory(
+                     branch=branch, hooks=hooks, memory_cfg=memory_cfg,
+                     canonical_memory_dir=memory_dir,
+                     journal_dir=journal_dir, corpus_path=corpus_path,
+diff --git a/llm/client.py b/llm/client.py
+index a864974..bec5049 100644
+--- a/llm/client.py
++++ b/llm/client.py
+@@ -272,7 +272,11 @@ def pop_last_reasoning() -> str:
+ def _c() -> OpenAI:
+     global _client
+     if _client is None:
+-        _client = OpenAI(base_url="https://openrouter.ai/api/v1", api_key=_api_key())
++        compatible = os.environ.get("RSI_LLM_MODE") == "openai"
++        _client = OpenAI(
++            base_url=os.environ["RSI_LLM_BASE_URL"] if compatible else "https://openrouter.ai/api/v1",
++            api_key=os.environ.get("RSI_LLM_API_KEY", "local-gateway") if compatible else _api_key(),
++            timeout=float(os.environ.get("RSI_LLM_TIMEOUT", "120")), max_retries=0)
+     return _client
+ 
+ 
+@@ -327,14 +331,16 @@ def chat(model: str, system: str, user: str,
+             "allow_fallbacks": bool(provider_allow_fallbacks),
+             "require_parameters": bool(provider_require_parameters),
+         }
+-    if extra_body:
++    compatible = os.environ.get("RSI_LLM_MODE") == "openai"
++    if extra_body and not compatible:
+         kwargs["extra_body"] = extra_body
+     log = logging.getLogger("rsiagent.llm")
+     resp = None
+-    for attempt in range(4):                       # robust to TRANSIENT API errors (non-JSON body,
++    attempts = 3 if compatible else 4
++    for attempt in range(attempts):                       # robust to TRANSIENT API errors (non-JSON body,
+         try:                                       # 5xx, rate-limit): a flaky response must not kill a run
+             resp = _c().chat.completions.create(model=model, messages=messages,
+-                                                max_tokens=max_tokens, temperature=temperature, **kwargs)
++                                                **({"max_completion_tokens": max_tokens} if compatible else {"max_tokens": max_tokens, "temperature": temperature}), **kwargs)
+             if (getattr(resp, "error", None)
+                     or not getattr(resp, "choices", None)):
+                 raise _CompletionResponseError(resp)
+@@ -348,7 +354,7 @@ def chat(model: str, system: str, user: str,
+                             "embedded_code=%s error_type=%s", model,
+                             e.body["id"], e.body["provider"], e.status_code,
+                             metadata.get("error_type") if isinstance(metadata, dict) else None)
+-            if kwargs and not order and not isinstance(e, _CompletionResponseError):
++            if not compatible and kwargs and not order and not isinstance(e, _CompletionResponseError):
+                 # A returned error/empty completion is not evidence that optional
+                 # fields are unsupported. Preserve the exact request on its retry.
+                 log.warning("%s erred with optional request fields (%s); dropping them "
+@@ -357,7 +363,7 @@ def chat(model: str, system: str, user: str,
+                 continue
+             body = getattr(e, "body", None)        # v35.1: surface the provider's actual
+             detail = f" body={str(body)[:300]}" if body else ""  # complaint — a 400's
+-            if attempt == 3:                       # class name alone hides the cause
++            if attempt == attempts - 1 or (compatible and not _recoverable_transport(e)):
+                 status = _status_code(e)
+                 recoverable = _recoverable_transport(e)
+                 log.warning("%s failed after retries (%s)%s; raising %s transport "
+@@ -374,6 +380,14 @@ def chat(model: str, system: str, user: str,
+         cause = ValueError("response had no choices after retries")
+         raise LLMTransportError(model, cause, recoverable=True,
+                                 detail=str(cause)) from cause
++    usage_log = os.environ.get("RSI_LLM_USAGE_LOG")
++    if usage_log:
++        import json
++        record = {"time": time.time(), "model": model, "response_id": resp.id,
++                  "case": os.environ.get("RSI_LLM_CASE_ID"),
++                  "usage": resp.usage.model_dump() if resp.usage else None}
++        with open(usage_log, "a", encoding="utf-8") as usage_file:
++            usage_file.write(json.dumps(record) + "\n")
+     provider = _response_provider(resp)
+     model_counts = _PROVIDER_COUNTS.setdefault(model, {})
+     model_counts[provider] = model_counts.get(provider, 0) + 1
+@@ -414,7 +428,7 @@ def chat(model: str, system: str, user: str,
+     txt = txt.strip()
+     mandatory_reasoning = _reasoning_cannot_disable(model)
+     retry_ceiling = 131072 if mandatory_reasoning else 40000
+-    if truncated and max_tokens < retry_ceiling and (not txt or _looks_cut(txt)):
++    if not compatible and truncated and max_tokens < retry_ceiling and (not txt or _looks_cut(txt)):
+         # TOKEN-LIMIT TRUNCATION: the reply hit the length cap with either NO visible
+         # text (hidden reasoning ate the budget) or a program CUT MID-STREAM (its JSON
+         # action never closed). A same-budget retry truncates identically — retry once

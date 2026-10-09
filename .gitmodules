@@ -1,3 +1,7 @@
 [submodule "submodule/sdfcad"]
 	path = submodule/sdfcad
 	url = https://gitlab.com/nobodyinperson/sdfcad.git
+[submodule "submodule/RSIAgent"]
+	path = submodule/RSIAgent
+	url = git@github.com:CAN-Lee/Intern_SUSTech.git
+	branch = thirdparty/rsiagent-mesh

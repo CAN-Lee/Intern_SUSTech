@@ -1,0 +1,30 @@
+{"time": 1791544186.9469888, "event": "PROTOCOL_OPENED", "payload": {"resume": false}}
+{"time": 1791544186.947257, "event": "PHASE1_STARTED", "payload": {}}
+{"time": 1791544232.5087364, "event": "PHASE1_WAVE_STARTED", "payload": {"wave": 1, "projects": 2, "memory_manifest": {}, "max_parallel": 2}}
+{"time": 1791544443.1608353, "event": "PHASE1_BRANCH_VERIFIED", "payload": {"wave": 1, "project": 2, "project_id": "drilled-triangle-frame", "terminal_outcome": "PASS"}}
+{"time": 1791544505.015458, "event": "PHASE1_BRANCH_VERIFIED", "payload": {"wave": 1, "project": 1, "project_id": "bored-taper-hub", "terminal_outcome": "PASS"}}
+{"time": 1791544569.4999597, "event": "MEMORY_COMMITTED", "payload": {"before": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a", "after": "0978038360f0f01bca3581275da750865c1a26ab9e5db0664d51184cb39fc999", "verdict": "PASS"}}
+{"time": 1791544569.6850183, "event": "PHASE1_BRANCH_MEMORY_COMMITTED", "payload": {"wave": 1, "project": 1, "project_id": "bored-taper-hub", "terminal_outcome": "PASS", "memory_changes": {"csg_axial_mechanical_workflow.md": "added"}}}
+{"time": 1791544654.7737775, "event": "MEMORY_COMMITTED", "payload": {"before": "0978038360f0f01bca3581275da750865c1a26ab9e5db0664d51184cb39fc999", "after": "e5d887ab0c646eed1d4bed5fa6bc190e66d823c6678aa0660b99a48866456269", "verdict": "PASS"}}
+{"time": 1791544654.9035296, "event": "PHASE1_BRANCH_MEMORY_COMMITTED", "payload": {"wave": 1, "project": 2, "project_id": "drilled-triangle-frame", "terminal_outcome": "PASS", "memory_changes": {"csg_rounded_planar_frames.md": "added"}}}
+{"time": 1791544654.908372, "event": "PHASE1_WAVE_COMPLETED", "payload": {"wave": 1, "projects": 2, "total_projects": 2}}
+{"time": 1791544691.1091702, "event": "PHASE1_WAVE_STARTED", "payload": {"wave": 2, "projects": 2, "memory_manifest": {"csg_axial_mechanical_workflow.md": {"bytes": 7210, "sha256": "c8b7c679ad8af3f649db915b2fb84c3bdcee62a389cbe828223ba1c3388aea41"}, "csg_rounded_planar_frames.md": {"bytes": 8651, "sha256": "4128122126dca78740b226a836c1529d1061ef4132bf0ff4aa17a5cd4ca1db56"}}, "max_parallel": 2}}
+{"time": 1791545041.6002278, "event": "PHASE1_BRANCH_VERIFIED", "payload": {"wave": 2, "project": 4, "project_id": "clipped-orb-fork", "terminal_outcome": "PASS"}}
+{"time": 1791545097.025234, "event": "PHASE1_BRANCH_VERIFIED", "payload": {"wave": 2, "project": 3, "project_id": "hollow-rounded-tee", "terminal_outcome": "PASS"}}
+{"time": 1791545171.700712, "event": "MEMORY_COMMITTED", "payload": {"before": "e5d887ab0c646eed1d4bed5fa6bc190e66d823c6678aa0660b99a48866456269", "after": "163c2bcfc984033bbec7c78390d8348b3ceff89b0a771364507a875952705134", "verdict": "PASS"}}
+{"time": 1791545171.884723, "event": "PHASE1_BRANCH_MEMORY_COMMITTED", "payload": {"wave": 2, "project": 3, "project_id": "hollow-rounded-tee", "terminal_outcome": "PASS", "memory_changes": {"csg_hollow_orthogonal_capsules.md": "added"}}}
+{"time": 1791545319.668291, "event": "MEMORY_COMMITTED", "payload": {"before": "163c2bcfc984033bbec7c78390d8348b3ceff89b0a771364507a875952705134", "after": "8baec66d5d238f73b1ceb43bc04bb9e5da024a2cf28b8b392ec47032b60bf17f", "verdict": "PASS"}}
+{"time": 1791545319.9138198, "event": "PHASE1_BRANCH_MEMORY_COMMITTED", "payload": {"wave": 2, "project": 4, "project_id": "clipped-orb-fork", "terminal_outcome": "PASS", "memory_changes": {"csg_clipped_rounded_forks.md": "added", "csg_hollow_orthogonal_capsules.md": "changed", "csg_rounded_planar_frames.md": "changed"}}}
+{"time": 1791545319.9183385, "event": "PHASE1_WAVE_COMPLETED", "payload": {"wave": 2, "projects": 2, "total_projects": 4}}
+{"time": 1791545328.8491497, "event": "PHASE2_STARTED", "payload": {}}
+{"time": 1791545329.2014818, "event": "TARGET_STARTED", "payload": {"target_cycle": 1, "evolutions": 0, "final_after_curriculum_stall": false}}
+{"time": 1791545611.1273296, "event": "TARGET_VERIFIED", "payload": {"target_cycle": 1, "verdict": "PASS"}}
+{"time": 1791545611.1275516, "event": "TARGET_LEARNING_STARTED", "payload": {"target_cycle": 1, "verdict": "PASS", "evolutions": 0}}
+{"time": 1791545726.1461904, "event": "MEMORY_COMMITTED", "payload": {"before": "8baec66d5d238f73b1ceb43bc04bb9e5da024a2cf28b8b392ec47032b60bf17f", "after": "c9f67687740b68a069fc892ce186076ccd10e632475f320d6d67261ce186b457", "verdict": "PASS"}}
+{"time": 1791545726.1469562, "event": "TARGET_LEARNING_COMPLETED", "payload": {"target_cycle": 1, "verdict": "PASS", "evolutions": 0}}
+{"time": 1791545726.147085, "event": "PASS_NEXT_EXPERIENCE_REVIEW_STARTED", "payload": {"target_cycle": 1, "prospective_evolution": 1}}
+{"time": 1791545738.9204504, "event": "PASS_NEXT_EXPERIENCE_REVIEW_COMPLETED", "payload": {"target_cycle": 1, "projects": 0, "reason": "The verified reconstruction already passes all quantitative and structural requirements with strong margin: IoU 0.98465 exceeds 0.95, relative symmetric surface-distance P95 is about 0.00798 below 0.01, validation succeeds with only 8 leaves, and results are repeatable across seeds. The noted tangential-seam component mismatch is non-blocking and does not justify another practice wave because the target is already solved under the stated acceptance criteria.", "termination": "verifier_pass_curriculum_ready"}}
+{"time": 1791545738.9207606, "event": "TARGET_LOOP_TERMINATED", "payload": {"target_cycle": 1, "verdict": "PASS", "termination": "verifier_pass_curriculum_ready", "evolutions": 0}}
+{"time": 1791545739.1590261, "event": "PHASE3_STARTED", "payload": {"memory_hash": "c9f67687740b68a069fc892ce186076ccd10e632475f320d6d67261ce186b457"}}
+{"time": 1791545975.8106813, "event": "SEALED_EVALUATION_STARTED", "payload": {}}
+{"time": 1791545982.1651661, "event": "PROTOCOL_FINISHED", "payload": {"status": "completed"}}

@@ -1,0 +1,7 @@
+{
+  "memory_hash": "a186c6b7cb962ec57d0609b952e0cf07460a46bbaa37563cad3f078627cdc404",
+  "stages": {
+    "phase1": "saturated",
+    "phase2": "verifier_pass_curriculum_ready"
+  }
+}

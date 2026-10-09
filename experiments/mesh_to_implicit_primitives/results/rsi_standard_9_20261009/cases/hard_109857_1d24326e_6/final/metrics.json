@@ -1,0 +1,27 @@
+{
+  "voxel_iou_96": 0.9839215328554762,
+  "surface_distance_mean": 0.00024127332528751184,
+  "surface_distance_p95": 0.0016423175664635606,
+  "surface_distance_p95_relative": 0.0005810856462926148,
+  "primitive_count": 22,
+  "reconstructed_watertight": true,
+  "surface_metric": "symmetric sampled point-to-triangle",
+  "sample_count_per_mesh": 5000,
+  "seed": 9001,
+  "voxel_iou_48": 0.9839098954143202,
+  "memory_hash": "4303cacfc22c7d0a489fe3242c81e2b153d638badf84b80278743ceb1a6e6e7c",
+  "verifier_verdict": "PASS",
+  "transform": {
+    "center": [
+      -0.00041960738599300385,
+      0.0,
+      0.001038750633597374
+    ],
+    "scale": 0.9995472151786089
+  },
+  "coordinate_system": "normalized",
+  "surface_distances_original_units": {
+    "surface_distance_mean": 0.0002411640803880151,
+    "surface_distance_p95": 0.001641573949997562
+  }
+}

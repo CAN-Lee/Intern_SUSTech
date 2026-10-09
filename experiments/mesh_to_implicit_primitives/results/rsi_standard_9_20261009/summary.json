@@ -1,0 +1,125 @@
+[
+  {
+    "case": "easy_110956_df981ed9_0",
+    "status": "completed",
+    "error": null,
+    "stages": {
+      "phase1": "saturated",
+      "phase2": "verifier_pass_curriculum_ready"
+    },
+    "iou_48": 1.0,
+    "iou_96": 0.9991946142686385,
+    "p95_relative": 0.0007169547991595623,
+    "primitives": 2,
+    "seconds": 1159.1449086666107
+  },
+  {
+    "case": "easy_129012_576921da_0",
+    "status": "infrastructure_error",
+    "error": "RuntimeError: ValueError: Export is not watertight",
+    "stages": {},
+    "iou_48": null,
+    "iou_96": null,
+    "p95_relative": null,
+    "primitives": null,
+    "seconds": 55.40490484237671
+  },
+  {
+    "case": "easy_23853_4f653200_4",
+    "status": "infrastructure_error",
+    "error": "LLMTransportError: azure/gpt-5.6-sol transport failure HTTP 502: {'detail': '<html>\\r\\n<head><title>503 Service Temporarily Unavailable</title></head>\\r\\n<body>\\r\\n<center><h1>503 Service Temporarily Unavailable</h1></center>\\r\\n</body>\\r\\n</html>'}",
+    "stages": {
+      "phase1": "saturated",
+      "phase2": "verifier_pass_curriculum_ready"
+    },
+    "iou_48": null,
+    "iou_96": null,
+    "p95_relative": null,
+    "primitives": null,
+    "seconds": 1091.8546965122223
+  },
+  {
+    "case": "hard_109857_1d24326e_6",
+    "status": "completed",
+    "error": null,
+    "stages": {
+      "phase1": "saturated",
+      "phase2": "verifier_pass_curriculum_ready"
+    },
+    "iou_48": 0.9839098954143202,
+    "iou_96": 0.9839215328554762,
+    "p95_relative": 0.0005810856462926148,
+    "primitives": 22,
+    "seconds": 1739.9368710517883
+  },
+  {
+    "case": "hard_138244_f79136e9_0",
+    "status": "completed",
+    "error": null,
+    "stages": {
+      "phase1": "saturated",
+      "phase2": "verifier_pass_curriculum_ready"
+    },
+    "iou_48": 0.9583631513889792,
+    "iou_96": 0.9545810616854269,
+    "p95_relative": 0.0037888940472206954,
+    "primitives": 4,
+    "seconds": 2557.8198556900024
+  },
+  {
+    "case": "hard_96174_fea894a7_0",
+    "status": "completed",
+    "error": null,
+    "stages": {
+      "phase1": "saturated",
+      "phase2": "verifier_pass_curriculum_ready"
+    },
+    "iou_48": 0.9908501161890008,
+    "iou_96": 0.993162638933819,
+    "p95_relative": 0.0018248189526052386,
+    "primitives": 9,
+    "seconds": 1795.2176549434662
+  },
+  {
+    "case": "medium_132948_7b65c184_2",
+    "status": "completed",
+    "error": null,
+    "stages": {
+      "phase1": "saturated",
+      "phase2": "verifier_pass_curriculum_ready"
+    },
+    "iou_48": 0.9966684797389176,
+    "iou_96": 0.989226377651447,
+    "p95_relative": 0.0023113666282930764,
+    "primitives": 2,
+    "seconds": 1570.975033044815
+  },
+  {
+    "case": "medium_140224_6952f93f_3",
+    "status": "completed",
+    "error": null,
+    "stages": {
+      "phase1": "saturated",
+      "phase2": "verifier_pass_curriculum_ready"
+    },
+    "iou_48": 0.9795918367346939,
+    "iou_96": 0.9881573498964803,
+    "p95_relative": 0.0013901772366360496,
+    "primitives": 9,
+    "seconds": 1952.6712052822113
+  },
+  {
+    "case": "medium_62111_9ba5436e_2",
+    "status": "completed",
+    "error": null,
+    "stages": {
+      "phase1": "saturated",
+      "phase2": "verifier_pass_curriculum_ready"
+    },
+    "iou_48": 1.0,
+    "iou_96": 0.992979899192324,
+    "p95_relative": 0.0007058620240850768,
+    "primitives": 4,
+    "seconds": 1600.2218198776245
+  }
+]

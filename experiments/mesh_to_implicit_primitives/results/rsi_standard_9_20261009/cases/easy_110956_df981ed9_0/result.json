@@ -1,0 +1,35 @@
+{
+  "status": "completed",
+  "stages": {
+    "phase1": "saturated",
+    "phase2": "verifier_pass_curriculum_ready"
+  },
+  "metrics": {
+    "voxel_iou_96": 0.9991946142686385,
+    "surface_distance_mean": 0.0003400258574592155,
+    "surface_distance_p95": 0.0018111499660964866,
+    "surface_distance_p95_relative": 0.0007169547991595623,
+    "primitive_count": 2,
+    "reconstructed_watertight": true,
+    "surface_metric": "symmetric sampled point-to-triangle",
+    "sample_count_per_mesh": 5000,
+    "seed": 9001,
+    "voxel_iou_48": 1.0,
+    "memory_hash": "b8f967a26791f93094e972b00448e3f7009f5db0df8ee032deddc59220961890",
+    "verifier_verdict": "PASS",
+    "transform": {
+      "center": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "scale": 0.9999999776482582
+    },
+    "coordinate_system": "normalized",
+    "surface_distances_original_units": {
+      "surface_distance_mean": 0.0003400258498590453,
+      "surface_distance_p95": 0.0018111499256141302
+    }
+  },
+  "seconds": 1159.1449086666107
+}

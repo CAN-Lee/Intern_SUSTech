@@ -1,0 +1,4 @@
+.venv-rsi/
+__pycache__/
+.pytest_cache/
+rsi_runs/
