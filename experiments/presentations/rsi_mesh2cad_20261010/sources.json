@@ -1,0 +1,39 @@
+{
+  "slides": 6,
+  "language": "zh-CN",
+  "data_runs": [
+    "/data/lican/Intern_SUSTech/experiments/mesh_to_implicit_primitives/rsi_runs/standard_9_20261009_trial01",
+    "/data/lican/Intern_SUSTech/experiments/mesh_to_implicit_primitives/rsi_runs/voron_motor_mount_trial01",
+    "/data/lican/Intern_SUSTech/experiments/mesh_to_implicit_primitives/rsi_runs/voron_motor_mount_48_trial01"
+  ],
+  "references": {
+    "1": [
+      "UCSG-Net — Unsupervised Discovering of Constructive Solid Geometry Tree",
+      "Kania, Zięba & Kajdanowicz, NeurIPS 2020",
+      "https://arxiv.org/abs/2006.09102",
+      "10.48550/arXiv.2006.09102"
+    ],
+    "2": [
+      "CAD-Recode: Reverse Engineering CAD Code from Point Clouds",
+      "Rukhovich et al., ICCV 2025",
+      "https://arxiv.org/abs/2412.14042",
+      "10.48550/arXiv.2412.14042"
+    ],
+    "3": [
+      "StepCAD: Mesh-to-CAD Code Generation via LLM Policy and Geometry-Guided Search",
+      "Nehme & Ahmed, arXiv 2026",
+      "https://arxiv.org/abs/2610.03799",
+      "10.48550/arXiv.2610.03799"
+    ],
+    "4": [
+      "RSIAgent: Autonomous Exploration for Recursive Self-improvement in New Environments",
+      "Zhu et al., arXiv 2026",
+      "https://arxiv.org/abs/2609.15364",
+      "10.48550/arXiv.2609.15364"
+    ]
+  },
+  "total_tokens": 19402733,
+  "estimated_usd": 45.255022800000006,
+  "verification_date": "2026-10-10",
+  "preview": "PNG/PDF rendered from shared layout; PPTX uses editable text and shapes."
+}

@@ -11,6 +11,25 @@ def program(kind,size):
     return {"schema_version":1,"root":{"kind":kind,"size":size}}
 
 
+def test_larger_configured_trees_export_and_score(monkeypatch):
+    nodes=[{"kind":"sphere","size":[.5]} for _ in range(32)]
+    while len(nodes)>1:
+        nodes=[{"op":"union","children":nodes[i:i+2]} for i in range(0,len(nodes),2)]
+    p={"schema_version":1,"root":nodes[0]}
+    monkeypatch.setenv('RSI_MAX_PRIMITIVES','24')
+    with pytest.raises(ValueError,match='Too many'):
+        g.export_mesh(p,resolution=24)
+    monkeypatch.setenv('RSI_MAX_PRIMITIVES','48')
+    monkeypatch.setenv('RSI_MAX_DEPTH','16')
+    mesh=g.export_mesh(p,resolution=24)
+    assert mesh.is_watertight
+    assert g.metrics(p,mesh,mesh,grid=12,count=100)['primitive_count']==32
+    with pytest.raises(ValueError,match='Too many'):
+        g.validate(p,max_leaves=24)
+    with pytest.raises(ValueError,match='depth'):
+        g.validate(p,max_depth=3)
+
+
 @pytest.mark.parametrize("kind,size,inside",[
     ("sphere",[.5],[0,0,0]),("box",[.5,.3,.2],[0,0,0]),
     ("cylinder",[.4,.6],[0,0,0]),("cone",[.5,.2,.6],[0,0,0]),

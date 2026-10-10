@@ -8,6 +8,7 @@ from __future__ import annotations
 import argparse
 import copy
 import json
+import os
 from pathlib import Path
 
 import numpy as np
@@ -40,7 +41,9 @@ def normalize(mesh):
     return out, {"center": center.tolist(), "scale": scale}
 
 
-def validate(program, max_leaves=24, max_depth=12):
+def validate(program, max_leaves=None, max_depth=None):
+    max_leaves = int(os.environ.get("RSI_MAX_PRIMITIVES", "24")) if max_leaves is None else max_leaves
+    max_depth = int(os.environ.get("RSI_MAX_DEPTH", "12")) if max_depth is None else max_depth
     if program.get("schema_version") != 1 or "root" not in program:
         raise ValueError("Expected schema_version=1 and root")
     leaves = []

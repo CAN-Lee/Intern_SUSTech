@@ -28,7 +28,8 @@ def configuration(path):
         if type(cfg[k]) is not int or cfg[k]<1: raise ValueError(f"{k} must be positive integer")
     os.environ.update(RSI_LLM_MODE="openai",RSI_LLM_BASE_URL=cfg["base_url"],
         RSI_LLM_API_KEY=os.environ.get(cfg["api_key_env"],cfg["api_key_default"]),
-        RSI_LLM_TIMEOUT=str(cfg["request_timeout"]))
+        RSI_LLM_TIMEOUT=str(cfg["request_timeout"]),
+        RSI_MAX_PRIMITIVES=str(cfg["max_primitives"]), RSI_MAX_DEPTH=str(cfg["max_depth"]))
     return cfg
 
 

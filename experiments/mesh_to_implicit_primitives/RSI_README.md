@@ -2,6 +2,8 @@
 
 入口为 `run_rsi.py`，配置为 `configs/rsi_standard.yaml`。原 `fit_cases.py` 和 `results/` 保留作为历史基线。
 
+输入网格见 [data/README.md](data/README.md)。六页汇报位于 [experiments/presentations](../presentations/rsi_mesh2cad_20261010/RSI_Mesh2CAD_汇报.pptx)。
+
 ## 当前验证状态（2026-10-09）
 
 - 几何、框架适配与相关上游回归测试：66 项通过。

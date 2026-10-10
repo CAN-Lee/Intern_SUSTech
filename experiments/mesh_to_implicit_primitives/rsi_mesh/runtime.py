@@ -80,6 +80,8 @@ class DockerVM:
         args = ["run", "-d", "--name", self.name, "--label", "project=mesh-rsi", "--network", "none",
                 "--read-only", "--cap-drop=ALL", "--security-opt", "no-new-privileges", "--pids-limit", "256",
                 "--cpus", str(config["container_cpus"]), "--memory", config["container_memory"],
+                "-e", f"RSI_MAX_PRIMITIVES={config['max_primitives']}",
+                "-e", f"RSI_MAX_DEPTH={config['max_depth']}",
                 "--user", f"{os.getuid()}:{os.getgid()}", "--tmpfs", "/tmp:rw,nosuid,size=2g",
                 "-v", f"{self.home.resolve()}:/home/user:rw",
                 "-v", f"{config.get('_tools_root', ROOT / 'rsi_mesh')}:/opt/rsi/rsi_mesh:ro"]
@@ -132,7 +134,7 @@ cylinder [radius,half_height], cone [bottom_radius,top_radius,half_height],
 torus [major_radius,minor_radius] (major>minor), capsule [radius,segment_half_length].
 All sizes positive. Local axial direction is Z. Boolean NODE: {"op":"union" or
 "difference" or "intersection", "children":[NODE,NODE]}; difference is first minus second.
-Maximum 24 primitive leaves, tree depth 12. You choose structure and initialization.
+You choose structure and initialization within the configured primitive and depth limits.
 g.validate(program); g.optimize(program,mesh,seed=42,max_nfev=45) refines parameters
 of your fixed tree. Keep per-call optimization modest; use evidence to select changes.
 g.export_mesh(program,resolution=112) produces a trimesh mesh. g.preview(input,output,path)
@@ -177,7 +179,8 @@ class RoleSession:
         prompt += "\nAvailable memory under /home/user/.memory (may be empty):\n"+listing
         result, self.history = run_attempt(prompt, vm, cfg, sink, initial_history=self.history,
             continue_context=bool(self.history), allow_noop_done=True, surface_baseline={},
-            instruction_is_complete_opening=True, system_prompt=SYSTEM.format(role=self.role,tools=TOOL_GUIDE),
+            instruction_is_complete_opening=True, system_prompt=SYSTEM.format(role=self.role,tools=TOOL_GUIDE +
+                f"\nMaximum {self.config['max_primitives']} primitive leaves, tree depth {self.config['max_depth']}."),
             terminal_handoff_ready=ready,
             iter_hook=lambda _: vm.check_budget())
         atomic_json(sink_path/"history.json",self.history)
